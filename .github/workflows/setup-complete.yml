@@ -1,0 +1,90 @@
+# Nome do workflow que aparecerá no GitHub Actions
+name: Deploy BioActive Hair Plugin to WordPress
+
+# Define quando o workflow será executado
+on:
+  push:
+    # O workflow será acionado sempre que houver um push para o branch 'main'
+    branches:
+      - main
+  # Permite executar o workflow manualmente pela interface do GitHub
+  workflow_dispatch:
+
+# Define os jobs (tarefas) que serão executados
+jobs:
+  deploy:
+    # O job será executado em um ambiente Ubuntu
+    runs-on: ubuntu-latest
+
+    # Define as variáveis de ambiente para este job
+    env:
+      # Caminho completo onde o plugin será instalado no servidor WordPress
+      # Exemplo: /srv1435/32546410a73a56cf/bioactivehair.com/public_html/wp-content/plugins/bioactive-hair-plugin/
+      REMOTE_PLUGIN_PATH: ${{ secrets.DEPLOY_PATH }}/bioactive-hair-plugin/
+      # Nome do arquivo principal do plugin WordPress
+      PLUGIN_MAIN_FILE: bioactive-hair-plugin.php
+      # Nome do plugin para WP-CLI
+      PLUGIN_SLUG: bioactive-hair-plugin
+
+    # Define os passos (steps) do job
+    steps:
+      # Passo 1: Faz o checkout do código do seu repositório
+      - name: Checkout do código
+        uses: actions/checkout@v4
+
+      # Passo 2: Configura o agente SSH para usar a chave privada
+      - name: Configurar SSH Agent
+        uses: webfactory/ssh-agent@v0.9.0
+        with:
+          # Adiciona a chave privada SSH dos GitHub Secrets ao agente SSH
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+      # Passo 3: Adiciona o host SSH conhecido para evitar prompts de confirmação
+      - name: Adicionar Host SSH Conhecido
+        run: |
+          # Cria o diretório .ssh se não existir
+          mkdir -p ~/.ssh
+          # Adiciona o host do servidor aos hosts conhecidos
+          ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
+          # Define permissões corretas para o arquivo known_hosts
+          chmod 600 ~/.ssh/known_hosts
+
+      # Passo 4: Cria a pasta do plugin no servidor e faz o deploy dos arquivos
+      - name: Criar pasta do plugin e fazer deploy dos arquivos
+        run: |
+          # Conecta via SSH e executa comandos no servidor
+          ssh ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }} << 'EOF'
+            # Cria o diretório do plugin se ele não existir
+            mkdir -p "${REMOTE_PLUGIN_PATH}"
+            # Define permissões de escrita para o diretório do plugin (importante para o rsync)
+            chmod -R 775 "${REMOTE_PLUGIN_PATH}"
+          EOF
+          # Sincroniza os arquivos do repositório local para o servidor via rsync
+          # -avz: archive, verbose, compress
+          # --delete: remove arquivos no destino que não existem na origem
+          # --exclude .git: exclui a pasta .git
+          # --exclude .github: exclui a pasta .github
+          rsync -avz --delete --exclude '.git' --exclude '.github' ./ ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }}:"${REMOTE_PLUGIN_PATH}"
+
+      # Passo 5: Executa o script PHP auxiliar no servidor para criar/configurar o plugin
+      - name: Executar script PHP auxiliar para setup do plugin
+        run: |
+          # Conecta via SSH e executa o script PHP auxiliar no servidor
+          # Este script irá criar o arquivo principal do plugin e enfileirar os CSS
+          ssh ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }} "php ${REMOTE_PLUGIN_PATH}setup-wp-plugin.php"
+
+      # Passo 6: Ativa o plugin via WP-CLI
+      - name: Ativar o plugin via WP-CLI
+        run: |
+          # Conecta via SSH e executa o comando WP-CLI para ativar o plugin
+          # Assume que o WP-CLI está disponível no PATH do usuário SSH ou em /usr/local/bin/wp
+          ssh ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }} "wp plugin activate ${PLUGIN_SLUG} --path=${REMOTE_PLUGIN_PATH}../.."
+          # Nota: --path=${REMOTE_PLUGIN_PATH}../.. aponta para a raiz do WordPress
+          # Se o WP-CLI não estiver no PATH, use o caminho completo, ex: /usr/local/bin/wp
+
+      # Passo 7: Limpa o cache do WordPress (opcional, mas recomendado)
+      - name: Limpar cache do WordPress (se houver plugin de cache)
+        run: |
+          # Exemplo para WP Super Cache ou WP Rocket. Adapte conforme seu plugin de cache.
+          # ssh ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }} "wp cache flush --path=${REMOTE_PLUGIN_PATH}../.."
+          echo "Passo de limpeza de cache ignorado. Configure se necessário."
