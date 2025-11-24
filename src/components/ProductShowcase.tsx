@@ -1,4 +1,4 @@
-import productBottle from "@/assets/product-bottle.jpg";
+import productBottle from "@/assets/product-1-bottle.png";
 import { Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
