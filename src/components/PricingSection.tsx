@@ -16,6 +16,7 @@ const PricingSection = () => {
       discount: null,
       isRecommended: false,
       image: product1Bottle,
+      checkoutUrl: "https://ev.braip.com/checkout/pla9xzqy/chene9ov?currency=BRL",
     },
     {
       name: "Recomendado",
@@ -26,6 +27,7 @@ const PricingSection = () => {
       discount: "49% OFF",
       isRecommended: true,
       image: product3Bottles,
+      checkoutUrl: "https://ev.braip.com/checkout/plakrvxl/chene9ov?currency=BRL",
     },
     {
       name: "Avançado",
@@ -36,6 +38,7 @@ const PricingSection = () => {
       discount: "60% OFF",
       isRecommended: false,
       image: product5Bottles,
+      checkoutUrl: "https://ev.braip.com/checkout/plagzgrj/chene9ov?currency=BRL",
     },
   ];
 
@@ -131,13 +134,16 @@ const PricingSection = () => {
 
                 {/* CTA Button */}
                 <Button
+                  asChild
                   className={`w-full h-14 text-lg font-bold ${
                     plan.isRecommended
                       ? "bg-primary text-primary-foreground hover:bg-primary/90 animate-pulse-glow"
                       : "bg-accent text-primary hover:bg-accent/80"
                   }`}
                 >
-                  COMPRE AGORA
+                  <a href={plan.checkoutUrl} target="_blank" rel="noopener noreferrer">
+                    COMPRE AGORA
+                  </a>
                 </Button>
               </CardContent>
             </Card>
