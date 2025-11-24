@@ -13,15 +13,17 @@ Este pacote contém a versão exportável da landing page Bio Active Hair, otimi
 
 ### Método 1: Widget HTML do Elementor (Recomendado)
 
-1. **Adicionar CSS Global**
+1. **Adicionar CSS Global (vai no HEAD automaticamente)**
    - No WordPress, vá em **Elementor > Configurações Personalizadas > CSS Personalizado**
    - Cole todo o conteúdo do arquivo `styles.css`
    - Salve as alterações
+   - ⚠️ O Elementor injeta automaticamente esse CSS no `<head>` da página
 
-2. **Adicionar JavaScript Global**
-   - Vá em **Aparência > Personalizador > CSS Adicional** ou use um plugin como "Simple Custom CSS and JS"
+2. **Adicionar JavaScript Global (vai antes do </body>)**
+   - Use um plugin como "Simple Custom CSS and JS" ou "Code Snippets"
    - Cole o conteúdo do arquivo `script.js` dentro de tags `<script></script>`
-   - Ou adicione via **Elementor > Theme Builder > Footer** usando um widget HTML
+   - Configure para carregar no **Footer (antes do </body>)** - isso garante que o DOM esteja carregado
+   - ✅ Ou adicione via **Elementor > Theme Builder > Footer** usando um widget HTML
 
 3. **Adicionar Seções no Elementor**
    - Crie uma nova página no WordPress
