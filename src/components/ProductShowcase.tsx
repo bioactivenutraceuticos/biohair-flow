@@ -16,7 +16,7 @@ const ProductShowcase = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
           {/* Product Image */}
           <div className="relative animate-scale-in">
-            <div className="aspect-[3/4] rounded-2xl overflow-hidden scale-110">
+            <div className="aspect-[3/4] rounded-2xl overflow-hidden">
               <img
                 src={productBottle}
                 alt="Bio Active Hair - Frasco do Suplemento"
