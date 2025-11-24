@@ -4,20 +4,97 @@
   "type": "page",
   "content": [
     {
-      "id": "hero-section",
+      "id": "header-section",
       "elType": "section",
       "settings": {
-        "background_background": "gradient",
-        "background_color": "#ffffff",
-        "background_color_b": "#ffe6f5",
-        "background_gradient_angle": {"unit": "deg", "size": 135},
-        "padding": {"unit": "px", "top": "80", "bottom": "80"}
+        "layout": "full_width",
+        "background_background": "classic",
+        "background_color": "#FFFFFF",
+        "border_border": "solid",
+        "border_width": {"unit": "px", "top": 0, "right": 0, "bottom": 1, "left": 0},
+        "border_color": "#EEEEEE",
+        "padding": {"unit": "px", "top": 20, "right": 40, "bottom": 20, "left": 40},
+        "position": "fixed",
+        "z_index": 1000
       },
       "elements": [
         {
-          "id": "hero-column",
+          "id": "header-column-logo",
           "elType": "column",
-          "settings": {"_column_size": 50},
+          "settings": {
+            "_column_size": 33,
+            "content_position": "center"
+          },
+          "elements": [
+            {
+              "id": "logo-heading",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Bio Active Hair",
+                "header_size": "h3",
+                "title_color": "#CC007F",
+                "typography_font_size": {"unit": "px", "size": 24},
+                "typography_font_weight": "700"
+              }
+            }
+          ]
+        },
+        {
+          "id": "header-column-nav",
+          "elType": "column",
+          "settings": {
+            "_column_size": 67,
+            "content_position": "center"
+          },
+          "elements": [
+            {
+              "id": "navigation-menu",
+              "elType": "widget",
+              "widgetType": "nav-menu",
+              "settings": {
+                "layout": "horizontal",
+                "align_items": "right",
+                "pointer": "underline",
+                "menu_items": [
+                  {"text": "Início", "url": "#"},
+                  {"text": "Composição", "url": "#composicao"},
+                  {"text": "Resultados", "url": "#resultados"},
+                  {"text": "Depoimentos", "url": "#depoimentos"},
+                  {"text": "FAQ", "url": "#faq"}
+                ],
+                "text_color": "#333333",
+                "text_color_hover": "#CC007F",
+                "typography_font_size": {"unit": "px", "size": 16},
+                "typography_font_weight": "500"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hero-section",
+      "elType": "section",
+      "settings": {
+        "layout": "full_width",
+        "background_background": "gradient",
+        "background_color": "#FFFFFF",
+        "background_color_b": "#FFE6F5",
+        "background_gradient_type": "linear",
+        "background_gradient_angle": {"unit": "deg", "size": 135},
+        "padding": {"unit": "px", "top": 120, "right": 40, "bottom": 80, "left": 40},
+        "margin": {"unit": "px", "top": 80, "right": 0, "bottom": 0, "left": 0}
+      },
+      "elements": [
+        {
+          "id": "hero-column-left",
+          "elType": "column",
+          "settings": {
+            "_column_size": 50,
+            "content_position": "center",
+            "padding": {"unit": "px", "top": 0, "right": 40, "bottom": 0, "left": 0}
+          },
           "elements": [
             {
               "id": "hero-heading",
@@ -27,66 +104,100 @@
                 "title": "Recupere a Força e o Brilho dos Seus Cabelos em 30 Dias",
                 "header_size": "h1",
                 "title_color": "#333333",
-                "typography_font_size": {"unit": "px", "size": 48},
-                "typography_font_weight": "700"
+                "typography_font_size": {"unit": "px", "size": 48, "sizes": {"mobile": 32, "tablet": 40}},
+                "typography_font_weight": "700",
+                "typography_line_height": {"unit": "em", "size": 1.2},
+                "margin": {"unit": "px", "top": 0, "right": 0, "bottom": 24, "left": 0}
               }
             },
             {
-              "id": "hero-text",
+              "id": "hero-subtitle",
               "elType": "widget",
               "widgetType": "text-editor",
               "settings": {
                 "editor": "Fórmula exclusiva aprovada pela ANVISA com vitaminas e minerais essenciais para um cabelo forte, volumoso e saudável.",
                 "text_color": "#666666",
-                "typography_font_size": {"unit": "px", "size": 18}
+                "typography_font_size": {"unit": "px", "size": 18, "sizes": {"mobile": 16}},
+                "typography_line_height": {"unit": "em", "size": 1.6},
+                "margin": {"unit": "px", "top": 0, "right": 0, "bottom": 32, "left": 0}
               }
             },
             {
-              "id": "hero-benefits",
+              "id": "hero-benefits-list",
               "elType": "widget",
               "widgetType": "icon-list",
               "settings": {
                 "icon_list": [
-                  {"text": "✓ Liberado pela ANVISA", "icon": {"value": "fas fa-check-circle", "library": "fa-solid"}},
-                  {"text": "✓ Fórmula 100% natural", "icon": {"value": "fas fa-check-circle", "library": "fa-solid"}},
-                  {"text": "✓ Resultados em 30 dias", "icon": {"value": "fas fa-check-circle", "library": "fa-solid"}},
-                  {"text": "✓ Aprovado por especialistas", "icon": {"value": "fas fa-check-circle", "library": "fa-solid"}}
+                  {
+                    "text": "Liberado pela ANVISA",
+                    "icon": {"value": "fas fa-check-circle", "library": "fa-solid"}
+                  },
+                  {
+                    "text": "Fórmula 100% natural",
+                    "icon": {"value": "fas fa-check-circle", "library": "fa-solid"}
+                  },
+                  {
+                    "text": "Resultados em 30 dias",
+                    "icon": {"value": "fas fa-check-circle", "library": "fa-solid"}
+                  },
+                  {
+                    "text": "Aprovado por especialistas",
+                    "icon": {"value": "fas fa-check-circle", "library": "fa-solid"}
+                  }
                 ],
                 "icon_color": "#CC007F",
-                "text_color": "#333333"
+                "icon_size": {"unit": "px", "size": 20},
+                "text_color": "#333333",
+                "typography_font_size": {"unit": "px", "size": 16},
+                "typography_font_weight": "500",
+                "space_between": {"unit": "px", "size": 16},
+                "margin": {"unit": "px", "top": 0, "right": 0, "bottom": 40, "left": 0}
               }
             },
             {
-              "id": "hero-button",
+              "id": "hero-cta-button",
               "elType": "widget",
               "widgetType": "button",
               "settings": {
                 "text": "Quero Cabelos Saudáveis Agora",
-                "link": {"url": "#precos"},
+                "link": {"url": "#precos", "is_external": false},
+                "size": "lg",
                 "button_type": "default",
                 "background_color": "#CC007F",
-                "button_text_color": "#ffffff",
-                "typography_font_size": {"unit": "px", "size": 18},
+                "hover_background_color": "#A30065",
+                "button_text_color": "#FFFFFF",
+                "typography_font_size": {"unit": "px", "size": 18, "sizes": {"mobile": 16}},
                 "typography_font_weight": "600",
                 "border_radius": {"unit": "px", "top": 8, "right": 8, "bottom": 8, "left": 8},
-                "padding": {"unit": "px", "top": 16, "right": 48, "bottom": 16, "left": 48}
+                "padding": {"unit": "px", "top": 20, "right": 48, "bottom": 20, "left": 48},
+                "button_box_shadow": {
+                  "horizontal": 0,
+                  "vertical": 4,
+                  "blur": 16,
+                  "spread": 0,
+                  "color": "rgba(204, 0, 127, 0.3)"
+                }
               }
             }
           ]
         },
         {
-          "id": "hero-image-column",
+          "id": "hero-column-right",
           "elType": "column",
-          "settings": {"_column_size": 50},
+          "settings": {
+            "_column_size": 50,
+            "content_position": "center"
+          },
           "elements": [
             {
-              "id": "hero-image",
+              "id": "hero-product-image",
               "elType": "widget",
               "widgetType": "image",
               "settings": {
-                "image": {"url": "SUBSTITUA_PELO_URL_DA_IMAGEM_hero-product-composite.jpg"},
+                "image": {"url": "SUBSTITUA_hero-product-composite.jpg"},
                 "image_size": "full",
-                "align": "center"
+                "align": "center",
+                "width": {"unit": "%", "size": 100}
               }
             }
           ]
@@ -97,14 +208,16 @@
       "id": "problem-section",
       "elType": "section",
       "settings": {
-        "background_color": "#ffffff",
-        "padding": {"unit": "px", "top": "80", "bottom": "80"}
+        "background_color": "#FFFFFF",
+        "padding": {"unit": "px", "top": 80, "right": 40, "bottom": 80, "left": 40}
       },
       "elements": [
         {
           "id": "problem-column",
           "elType": "column",
-          "settings": {"_column_size": 100},
+          "settings": {
+            "_column_size": 100
+          },
           "elements": [
             {
               "id": "problem-heading",
@@ -115,7 +228,9 @@
                 "header_size": "h2",
                 "align": "center",
                 "title_color": "#333333",
-                "typography_font_size": {"unit": "px", "size": 36}
+                "typography_font_size": {"unit": "px", "size": 40, "sizes": {"mobile": 28, "tablet": 32}},
+                "typography_font_weight": "700",
+                "margin": {"unit": "px", "top": 0, "right": 0, "bottom": 24, "left": 0}
               }
             },
             {
@@ -123,9 +238,187 @@
               "elType": "widget",
               "widgetType": "text-editor",
               "settings": {
-                "editor": "Sabemos como é frustrante lidar com cabelos fracos, quebradiços e sem vida. Cada dia olhando no espelho e vendo fios caindo, sem brilho e sem volume.",
-                "align": "center",
-                "text_color": "#666666"
+                "editor": "<p style='text-align: center; max-width: 800px; margin: 0 auto;'>Sabemos como é frustrante lidar com cabelos fracos, quebradiços e sem vida. Cada dia olhando no espelho e vendo fios caindo, sem brilho e sem volume.</p>",
+                "text_color": "#666666",
+                "typography_font_size": {"unit": "px", "size": 18},
+                "typography_line_height": {"unit": "em", "size": 1.6},
+                "margin": {"unit": "px", "top": 0, "right": 0, "bottom": 48, "left": 0}
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "problem-cards-section",
+      "elType": "section",
+      "settings": {
+        "background_color": "#F8F8F8",
+        "padding": {"unit": "px", "top": 0, "right": 40, "bottom": 80, "left": 40}
+      },
+      "elements": [
+        {
+          "id": "problem-card-1-column",
+          "elType": "column",
+          "settings": {"_column_size": 33},
+          "elements": [
+            {
+              "id": "problem-card-1",
+              "elType": "widget",
+              "widgetType": "icon-box",
+              "settings": {
+                "icon": {"value": "fas fa-tired", "library": "fa-solid"},
+                "title_text": "Queda Excessiva",
+                "description_text": "Fios caindo constantemente no banho, escova e travesseiro",
+                "icon_color": "#CC007F",
+                "title_color": "#333333",
+                "description_color": "#666666",
+                "background_color": "#FFFFFF",
+                "border_radius": {"unit": "px", "top": 12, "right": 12, "bottom": 12, "left": 12},
+                "content_padding": {"unit": "px", "top": 32, "right": 24, "bottom": 32, "left": 24}
+              }
+            }
+          ]
+        },
+        {
+          "id": "problem-card-2-column",
+          "elType": "column",
+          "settings": {"_column_size": 33},
+          "elements": [
+            {
+              "id": "problem-card-2",
+              "elType": "widget",
+              "widgetType": "icon-box",
+              "settings": {
+                "icon": {"value": "fas fa-frown", "library": "fa-solid"},
+                "title_text": "Fios Quebradiços",
+                "description_text": "Cabelos fracos que quebram facilmente e não crescem",
+                "icon_color": "#CC007F",
+                "title_color": "#333333",
+                "description_color": "#666666",
+                "background_color": "#FFFFFF",
+                "border_radius": {"unit": "px", "top": 12, "right": 12, "bottom": 12, "left": 12},
+                "content_padding": {"unit": "px", "top": 32, "right": 24, "bottom": 32, "left": 24}
+              }
+            }
+          ]
+        },
+        {
+          "id": "problem-card-3-column",
+          "elType": "column",
+          "settings": {"_column_size": 33},
+          "elements": [
+            {
+              "id": "problem-card-3",
+              "elType": "widget",
+              "widgetType": "icon-box",
+              "settings": {
+                "icon": {"value": "fas fa-sad-tear", "library": "fa-solid"},
+                "title_text": "Sem Brilho e Volume",
+                "description_text": "Aparência opaca, sem vida e volume inexistente",
+                "icon_color": "#CC007F",
+                "title_color": "#333333",
+                "description_color": "#666666",
+                "background_color": "#FFFFFF",
+                "border_radius": {"unit": "px", "top": 12, "right": 12, "bottom": 12, "left": 12},
+                "content_padding": {"unit": "px", "top": 32, "right": 24, "bottom": 32, "left": 24}
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "product-showcase-section",
+      "elType": "section",
+      "settings": {
+        "background_color": "#FFFFFF",
+        "padding": {"unit": "px", "top": 80, "right": 40, "bottom": 80, "left": 40}
+      },
+      "elements": [
+        {
+          "id": "product-image-column",
+          "elType": "column",
+          "settings": {
+            "_column_size": 50,
+            "content_position": "center"
+          },
+          "elements": [
+            {
+              "id": "product-showcase-image",
+              "elType": "widget",
+              "widgetType": "image",
+              "settings": {
+                "image": {"url": "SUBSTITUA_product-bottle.jpg"},
+                "image_size": "full",
+                "align": "center"
+              }
+            }
+          ]
+        },
+        {
+          "id": "product-content-column",
+          "elType": "column",
+          "settings": {
+            "_column_size": 50,
+            "content_position": "center"
+          },
+          "elements": [
+            {
+              "id": "product-heading",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "A Solução Completa para Seus Cabelos",
+                "header_size": "h2",
+                "title_color": "#333333",
+                "typography_font_size": {"unit": "px", "size": 36},
+                "typography_font_weight": "700",
+                "margin": {"unit": "px", "bottom": 24}
+              }
+            },
+            {
+              "id": "product-description",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "Bio Active Hair é um suplemento capilar desenvolvido com uma fórmula exclusiva que combina vitaminas, minerais e ativos naturais para fortalecer seus fios de dentro para fora.",
+                "text_color": "#666666",
+                "typography_font_size": {"unit": "px", "size": 16},
+                "margin": {"unit": "px", "bottom": 32}
+              }
+            },
+            {
+              "id": "product-features",
+              "elType": "widget",
+              "widgetType": "icon-list",
+              "settings": {
+                "icon_list": [
+                  {"text": "Fortalece os fios desde a raiz", "icon": {"value": "fas fa-check", "library": "fa-solid"}},
+                  {"text": "Reduz a queda capilar", "icon": {"value": "fas fa-check", "library": "fa-solid"}},
+                  {"text": "Promove crescimento saudável", "icon": {"value": "fas fa-check", "library": "fa-solid"}},
+                  {"text": "Aumenta brilho e volume", "icon": {"value": "fas fa-check", "library": "fa-solid"}},
+                  {"text": "100% natural e seguro", "icon": {"value": "fas fa-check", "library": "fa-solid"}}
+                ],
+                "icon_color": "#CC007F",
+                "text_color": "#333333",
+                "space_between": {"unit": "px", "size": 12},
+                "margin": {"unit": "px", "bottom": 40}
+              }
+            },
+            {
+              "id": "product-cta",
+              "elType": "widget",
+              "widgetType": "button",
+              "settings": {
+                "text": "Garanta o Seu Agora",
+                "link": {"url": "#precos"},
+                "background_color": "#CC007F",
+                "button_text_color": "#FFFFFF",
+                "typography_font_size": {"unit": "px", "size": 18},
+                "typography_font_weight": "600",
+                "border_radius": {"unit": "px", "top": 8, "right": 8, "bottom": 8, "left": 8},
+                "padding": {"unit": "px", "top": 16, "right": 40, "bottom": 16, "left": 40}
               }
             }
           ]
@@ -136,12 +429,13 @@
       "id": "composition-section",
       "elType": "section",
       "settings": {
-        "background_color": "#f8f8f8",
-        "padding": {"unit": "px", "top": "80", "bottom": "80"}
+        "background_color": "#F8F8F8",
+        "padding": {"unit": "px", "top": 80, "right": 40, "bottom": 80, "left": 40},
+        "custom_id": "composicao"
       },
       "elements": [
         {
-          "id": "composition-column",
+          "id": "composition-header-column",
           "elType": "column",
           "settings": {"_column_size": 100},
           "elements": [
@@ -153,17 +447,146 @@
                 "title": "Composição Exclusiva e Poderosa",
                 "header_size": "h2",
                 "align": "center",
-                "title_color": "#333333"
+                "title_color": "#333333",
+                "typography_font_size": {"unit": "px", "size": 40},
+                "typography_font_weight": "700",
+                "margin": {"unit": "px", "bottom": 16}
               }
             },
             {
-              "id": "composition-text",
+              "id": "composition-subtitle",
               "elType": "widget",
               "widgetType": "text-editor",
               "settings": {
-                "editor": "Fórmula científica com ingredientes naturais testados e aprovados",
+                "editor": "<p style='text-align: center;'>Fórmula científica com ingredientes naturais testados e aprovados</p>",
+                "text_color": "#666666",
+                "typography_font_size": {"unit": "px", "size": 18},
+                "margin": {"unit": "px", "bottom": 48}
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ingredients-grid-section",
+      "elType": "section",
+      "settings": {
+        "background_color": "#F8F8F8",
+        "padding": {"unit": "px", "top": 0, "right": 40, "bottom": 80, "left": 40}
+      },
+      "elements": [
+        {
+          "id": "ingredient-biotin-column",
+          "elType": "column",
+          "settings": {"_column_size": 33},
+          "elements": [
+            {
+              "id": "ingredient-biotin-card",
+              "elType": "widget",
+              "widgetType": "image-box",
+              "settings": {
+                "image": {"url": "SUBSTITUA_ingredients-biotin.jpg"},
+                "title_text": "Biotina",
+                "description_text": "Fortalece os fios e estimula o crescimento capilar",
+                "title_color": "#333333",
+                "description_color": "#666666",
+                "content_background_color": "#FFFFFF",
+                "border_radius": {"unit": "px", "top": 12, "right": 12, "bottom": 12, "left": 12}
+              }
+            }
+          ]
+        },
+        {
+          "id": "ingredient-collagen-column",
+          "elType": "column",
+          "settings": {"_column_size": 33},
+          "elements": [
+            {
+              "id": "ingredient-collagen-card",
+              "elType": "widget",
+              "widgetType": "image-box",
+              "settings": {
+                "image": {"url": "SUBSTITUA_ingredients-collagen.jpg"},
+                "title_text": "Colágeno",
+                "description_text": "Melhora a elasticidade e previne quebras",
+                "title_color": "#333333",
+                "description_color": "#666666",
+                "content_background_color": "#FFFFFF",
+                "border_radius": {"unit": "px", "top": 12, "right": 12, "bottom": 12, "left": 12}
+              }
+            }
+          ]
+        },
+        {
+          "id": "ingredient-vitamin-c-column",
+          "elType": "column",
+          "settings": {"_column_size": 33},
+          "elements": [
+            {
+              "id": "ingredient-vitamin-c-card",
+              "elType": "widget",
+              "widgetType": "image-box",
+              "settings": {
+                "image": {"url": "SUBSTITUA_ingredients-vitamin-c.jpg"},
+                "title_text": "Vitamina C",
+                "description_text": "Antioxidante poderoso que protege os fios",
+                "title_color": "#333333",
+                "description_color": "#666666",
+                "content_background_color": "#FFFFFF",
+                "border_radius": {"unit": "px", "top": 12, "right": 12, "bottom": 12, "left": 12}
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "before-after-section",
+      "elType": "section",
+      "settings": {
+        "background_color": "#FFE6F5",
+        "padding": {"unit": "px", "top": 80, "right": 40, "bottom": 80, "left": 40},
+        "custom_id": "resultados"
+      },
+      "elements": [
+        {
+          "id": "before-after-column",
+          "elType": "column",
+          "settings": {"_column_size": 100},
+          "elements": [
+            {
+              "id": "before-after-heading",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Veja a Transformação Real",
+                "header_size": "h2",
                 "align": "center",
-                "text_color": "#666666"
+                "title_color": "#333333",
+                "typography_font_size": {"unit": "px", "size": 40},
+                "margin": {"unit": "px", "bottom": 16}
+              }
+            },
+            {
+              "id": "before-after-subtitle",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<p style='text-align: center;'>Resultados comprovados de mulheres que transformaram seus cabelos</p>",
+                "text_color": "#666666",
+                "margin": {"unit": "px", "bottom": 48}
+              }
+            },
+            {
+              "id": "before-after-image",
+              "elType": "widget",
+              "widgetType": "image",
+              "settings": {
+                "image": {"url": "SUBSTITUA_before-after.jpg"},
+                "image_size": "large",
+                "align": "center",
+                "border_radius": {"unit": "px", "top": 16, "right": 16, "bottom": 16, "left": 16}
               }
             }
           ]
@@ -174,12 +597,13 @@
       "id": "testimonials-section",
       "elType": "section",
       "settings": {
-        "background_color": "#ffffff",
-        "padding": {"unit": "px", "top": "80", "bottom": "80"}
+        "background_color": "#FFFFFF",
+        "padding": {"unit": "px", "top": 80, "right": 40, "bottom": 80, "left": 40},
+        "custom_id": "depoimentos"
       },
       "elements": [
         {
-          "id": "testimonials-column",
+          "id": "testimonials-header-column",
           "elType": "column",
           "settings": {"_column_size": 100},
           "elements": [
@@ -191,18 +615,88 @@
                 "title": "O Que Dizem Nossas Clientes",
                 "header_size": "h2",
                 "align": "center",
-                "title_color": "#333333"
+                "title_color": "#333333",
+                "typography_font_size": {"unit": "px", "size": 40},
+                "margin": {"unit": "px", "bottom": 48}
               }
-            },
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "testimonials-cards-section",
+      "elType": "section",
+      "settings": {
+        "background_color": "#FFFFFF",
+        "padding": {"unit": "px", "top": 0, "right": 40, "bottom": 80, "left": 40}
+      },
+      "elements": [
+        {
+          "id": "testimonial-1-column",
+          "elType": "column",
+          "settings": {"_column_size": 33},
+          "elements": [
             {
-              "id": "testimonial-1",
+              "id": "testimonial-1-card",
               "elType": "widget",
               "widgetType": "testimonial",
               "settings": {
                 "testimonial_content": "Meus cabelos estavam horríveis, caindo muito. Depois de usar Bio Active Hair por 2 meses, a diferença é incrível! Estão mais fortes e brilhantes.",
                 "testimonial_name": "Maria Silva",
                 "testimonial_job": "São Paulo, SP",
-                "testimonial_image": {"url": "SUBSTITUA_PELO_URL_DA_IMAGEM_testimonial-1.jpg"}
+                "testimonial_image": {"url": "SUBSTITUA_testimonial-1.jpg"},
+                "testimonial_image_position": "aside",
+                "testimonial_alignment": "center",
+                "background_color": "#F8F8F8",
+                "border_radius": {"unit": "px", "top": 12, "right": 12, "bottom": 12, "left": 12},
+                "content_padding": {"unit": "px", "top": 32, "right": 24, "bottom": 32, "left": 24}
+              }
+            }
+          ]
+        },
+        {
+          "id": "testimonial-2-column",
+          "elType": "column",
+          "settings": {"_column_size": 33},
+          "elements": [
+            {
+              "id": "testimonial-2-card",
+              "elType": "widget",
+              "widgetType": "testimonial",
+              "settings": {
+                "testimonial_content": "Estava perdendo a esperança com meus cabelos. Bio Active Hair mudou tudo! Agora tenho cabelos volumosos e saudáveis.",
+                "testimonial_name": "Ana Costa",
+                "testimonial_job": "Rio de Janeiro, RJ",
+                "testimonial_image": {"url": "SUBSTITUA_testimonial-2.jpg"},
+                "testimonial_image_position": "aside",
+                "testimonial_alignment": "center",
+                "background_color": "#F8F8F8",
+                "border_radius": {"unit": "px", "top": 12, "right": 12, "bottom": 12, "left": 12},
+                "content_padding": {"unit": "px", "top": 32, "right": 24, "bottom": 32, "left": 24}
+              }
+            }
+          ]
+        },
+        {
+          "id": "testimonial-3-column",
+          "elType": "column",
+          "settings": {"_column_size": 33},
+          "elements": [
+            {
+              "id": "testimonial-3-card",
+              "elType": "widget",
+              "widgetType": "testimonial",
+              "settings": {
+                "testimonial_content": "Recomendo para todas! Meus fios pararam de cair e o crescimento acelerou. Produto maravilhoso!",
+                "testimonial_name": "Paula Oliveira",
+                "testimonial_job": "Belo Horizonte, MG",
+                "testimonial_image": {"url": "SUBSTITUA_testimonial-3.jpg"},
+                "testimonial_image_position": "aside",
+                "testimonial_alignment": "center",
+                "background_color": "#F8F8F8",
+                "border_radius": {"unit": "px", "top": 12, "right": 12, "bottom": 12, "left": 12},
+                "content_padding": {"unit": "px", "top": 32, "right": 24, "bottom": 32, "left": 24}
               }
             }
           ]
@@ -213,13 +707,13 @@
       "id": "pricing-section",
       "elType": "section",
       "settings": {
-        "background_color": "#f8f8f8",
-        "padding": {"unit": "px", "top": "80", "bottom": "80"},
+        "background_color": "#F8F8F8",
+        "padding": {"unit": "px", "top": 80, "right": 40, "bottom": 80, "left": 40},
         "custom_id": "precos"
       },
       "elements": [
         {
-          "id": "pricing-column",
+          "id": "pricing-header-column",
           "elType": "column",
           "settings": {"_column_size": 100},
           "elements": [
@@ -231,17 +725,194 @@
                 "title": "Escolha Seu Plano Ideal",
                 "header_size": "h2",
                 "align": "center",
-                "title_color": "#333333"
+                "title_color": "#333333",
+                "typography_font_size": {"unit": "px", "size": 40},
+                "margin": {"unit": "px", "bottom": 16}
               }
             },
             {
-              "id": "pricing-description",
+              "id": "pricing-subtitle",
               "elType": "widget",
               "widgetType": "text-editor",
               "settings": {
-                "editor": "Quanto mais você compra, mais economiza! Aproveite nossas ofertas especiais.",
+                "editor": "<p style='text-align: center;'>Quanto mais você compra, mais economiza! Aproveite nossas ofertas especiais.</p>",
+                "text_color": "#666666",
+                "typography_font_size": {"unit": "px", "size": 18},
+                "margin": {"unit": "px", "bottom": 48}
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pricing-cards-section",
+      "elType": "section",
+      "settings": {
+        "background_color": "#F8F8F8",
+        "padding": {"unit": "px", "top": 0, "right": 40, "bottom": 80, "left": 40}
+      },
+      "elements": [
+        {
+          "id": "pricing-plan-1-column",
+          "elType": "column",
+          "settings": {"_column_size": 33},
+          "elements": [
+            {
+              "id": "pricing-plan-1",
+              "elType": "widget",
+              "widgetType": "price-table",
+              "settings": {
+                "heading": "1 Frasco",
+                "sub_heading": "Tratamento de 1 mês",
+                "price": "R$ 197",
+                "period": "por frasco",
+                "features_list": [
+                  {"text": "1 frasco com 60 cápsulas", "icon": {"value": "fas fa-check", "library": "fa-solid"}},
+                  {"text": "Frete Grátis", "icon": {"value": "fas fa-check", "library": "fa-solid"}},
+                  {"text": "Garantia de 30 dias", "icon": {"value": "fas fa-check", "library": "fa-solid"}}
+                ],
+                "button_text": "Comprar Agora",
+                "link": {"url": "#"},
+                "background_color": "#FFFFFF",
+                "button_background_color": "#CC007F",
+                "button_text_color": "#FFFFFF",
+                "border_radius": {"unit": "px", "top": 12, "right": 12, "bottom": 12, "left": 12}
+              }
+            }
+          ]
+        },
+        {
+          "id": "pricing-plan-2-column",
+          "elType": "column",
+          "settings": {"_column_size": 33},
+          "elements": [
+            {
+              "id": "pricing-plan-2-badge",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "🔥 MAIS VENDIDO",
+                "header_size": "h6",
                 "align": "center",
-                "text_color": "#666666"
+                "title_color": "#CC007F",
+                "typography_font_size": {"unit": "px", "size": 14},
+                "typography_font_weight": "700",
+                "margin": {"unit": "px", "bottom": 16}
+              }
+            },
+            {
+              "id": "pricing-plan-2",
+              "elType": "widget",
+              "widgetType": "price-table",
+              "settings": {
+                "heading": "3 Frascos",
+                "sub_heading": "Tratamento de 3 meses",
+                "price": "R$ 147",
+                "period": "por frasco",
+                "features_list": [
+                  {"text": "3 frascos com 60 cápsulas cada", "icon": {"value": "fas fa-check", "library": "fa-solid"}},
+                  {"text": "Economize R$ 150", "icon": {"value": "fas fa-check", "library": "fa-solid"}},
+                  {"text": "Frete Grátis", "icon": {"value": "fas fa-check", "library": "fa-solid"}},
+                  {"text": "Garantia de 30 dias", "icon": {"value": "fas fa-check", "library": "fa-solid"}}
+                ],
+                "button_text": "Comprar Agora",
+                "link": {"url": "#"},
+                "background_color": "#FFFFFF",
+                "button_background_color": "#CC007F",
+                "button_text_color": "#FFFFFF",
+                "border_radius": {"unit": "px", "top": 12, "right": 12, "bottom": 12, "left": 12},
+                "border_border": "solid",
+                "border_width": {"unit": "px", "top": 2, "right": 2, "bottom": 2, "left": 2},
+                "border_color": "#CC007F"
+              }
+            }
+          ]
+        },
+        {
+          "id": "pricing-plan-3-column",
+          "elType": "column",
+          "settings": {"_column_size": 33},
+          "elements": [
+            {
+              "id": "pricing-plan-3",
+              "elType": "widget",
+              "widgetType": "price-table",
+              "settings": {
+                "heading": "5 Frascos",
+                "sub_heading": "Tratamento de 5 meses",
+                "price": "R$ 117",
+                "period": "por frasco",
+                "features_list": [
+                  {"text": "5 frascos com 60 cápsulas cada", "icon": {"value": "fas fa-check", "library": "fa-solid"}},
+                  {"text": "Economize R$ 400", "icon": {"value": "fas fa-check", "library": "fa-solid"}},
+                  {"text": "Frete Grátis", "icon": {"value": "fas fa-check", "library": "fa-solid"}},
+                  {"text": "Garantia de 30 dias", "icon": {"value": "fas fa-check", "library": "fa-solid"}}
+                ],
+                "button_text": "Comprar Agora",
+                "link": {"url": "#"},
+                "background_color": "#FFFFFF",
+                "button_background_color": "#CC007F",
+                "button_text_color": "#FFFFFF",
+                "border_radius": {"unit": "px", "top": 12, "right": 12, "bottom": 12, "left": 12}
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "guarantee-section",
+      "elType": "section",
+      "settings": {
+        "background_background": "gradient",
+        "background_color": "#CC007F",
+        "background_color_b": "#A30065",
+        "background_gradient_angle": {"unit": "deg", "size": 135},
+        "padding": {"unit": "px", "top": 80, "right": 40, "bottom": 80, "left": 40}
+      },
+      "elements": [
+        {
+          "id": "guarantee-column",
+          "elType": "column",
+          "settings": {"_column_size": 100},
+          "elements": [
+            {
+              "id": "guarantee-heading",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Garantia de 30 Dias",
+                "header_size": "h2",
+                "align": "center",
+                "title_color": "#FFFFFF",
+                "typography_font_size": {"unit": "px", "size": 40},
+                "margin": {"unit": "px", "bottom": 24}
+              }
+            },
+            {
+              "id": "guarantee-text",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<p style='text-align: center; color: #FFFFFF; font-size: 18px; max-width: 800px; margin: 0 auto;'>Experimente Bio Active Hair sem riscos! Se não estiver satisfeita com os resultados em 30 dias, devolvemos 100% do seu dinheiro. Sem perguntas, sem complicações.</p>",
+                "margin": {"unit": "px", "bottom": 40}
+              }
+            },
+            {
+              "id": "guarantee-button",
+              "elType": "widget",
+              "widgetType": "button",
+              "settings": {
+                "text": "Quero Experimentar Agora",
+                "link": {"url": "#precos"},
+                "align": "center",
+                "background_color": "#FFFFFF",
+                "button_text_color": "#CC007F",
+                "typography_font_size": {"unit": "px", "size": 18},
+                "typography_font_weight": "600",
+                "border_radius": {"unit": "px", "top": 8, "right": 8, "bottom": 8, "left": 8},
+                "padding": {"unit": "px", "top": 16, "right": 40, "bottom": 16, "left": 40}
               }
             }
           ]
@@ -252,8 +923,9 @@
       "id": "faq-section",
       "elType": "section",
       "settings": {
-        "background_color": "#ffffff",
-        "padding": {"unit": "px", "top": "80", "bottom": "80"}
+        "background_color": "#FFFFFF",
+        "padding": {"unit": "px", "top": 80, "right": 40, "bottom": 80, "left": 40},
+        "custom_id": "faq"
       },
       "elements": [
         {
@@ -269,7 +941,9 @@
                 "title": "Perguntas Frequentes",
                 "header_size": "h2",
                 "align": "center",
-                "title_color": "#333333"
+                "title_color": "#333333",
+                "typography_font_size": {"unit": "px", "size": 40},
+                "margin": {"unit": "px", "bottom": 48}
               }
             },
             {
@@ -280,25 +954,64 @@
                 "tabs": [
                   {
                     "tab_title": "Como devo tomar Bio Active Hair?",
-                    "tab_content": "Recomendamos tomar 2 cápsulas por dia, preferencialmente junto com as refeições."
+                    "tab_content": "Recomendamos tomar 2 cápsulas por dia, preferencialmente junto com as refeições principais (café da manhã ou almoço) para melhor absorção dos nutrientes."
                   },
                   {
                     "tab_title": "Em quanto tempo verei resultados?",
-                    "tab_content": "Os primeiros resultados aparecem em 30 dias, mas recomendamos o uso contínuo por pelo menos 90 dias para resultados completos."
+                    "tab_content": "Os primeiros resultados aparecem em aproximadamente 30 dias de uso contínuo, mas recomendamos o tratamento completo de pelo menos 90 dias (3 meses) para resultados completos e duradouros."
                   },
                   {
                     "tab_title": "Bio Active Hair tem efeitos colaterais?",
-                    "tab_content": "Não. Bio Active Hair é feito com ingredientes naturais e é seguro para consumo. Aprovado pela ANVISA."
+                    "tab_content": "Não. Bio Active Hair é feito com ingredientes naturais de alta qualidade e é seguro para consumo. O produto é aprovado pela ANVISA e passou por rigorosos testes de qualidade e segurança."
                   },
                   {
                     "tab_title": "Posso usar se estiver grávida ou amamentando?",
-                    "tab_content": "Recomendamos consultar seu médico antes de iniciar qualquer suplementação durante gravidez ou amamentação."
+                    "tab_content": "Recomendamos que gestantes e lactantes consultem seu médico antes de iniciar qualquer suplementação. Embora os ingredientes sejam naturais, é importante ter orientação médica personalizada."
                   },
                   {
                     "tab_title": "A compra é segura?",
-                    "tab_content": "Sim! Utilizamos criptografia SSL e seus dados estão 100% protegidos. Oferecemos garantia de 30 dias."
+                    "tab_content": "Sim! Utilizamos criptografia SSL de ponta e seus dados estão 100% protegidos. Além disso, oferecemos garantia incondicional de 30 dias - se não estiver satisfeita, devolvemos seu dinheiro."
+                  },
+                  {
+                    "tab_title": "O frete é grátis?",
+                    "tab_content": "Sim! Oferecemos frete grátis para todo o Brasil em todos os nossos planos. Seu pedido chega em até 10 dias úteis com rastreamento completo."
+                  },
+                  {
+                    "tab_title": "Quanto tempo dura cada frasco?",
+                    "tab_content": "Cada frasco contém 60 cápsulas, suficiente para 30 dias de tratamento (tomando 2 cápsulas por dia conforme recomendado)."
                   }
-                ]
+                ],
+                "icon_align": "right",
+                "border_width": {"unit": "px", "top": 0, "right": 0, "bottom": 1, "left": 0},
+                "border_color": "#EEEEEE",
+                "title_color": "#333333",
+                "title_color_active": "#CC007F",
+                "content_color": "#666666"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "footer-section",
+      "elType": "section",
+      "settings": {
+        "background_color": "#333333",
+        "padding": {"unit": "px", "top": 40, "right": 40, "bottom": 40, "left": 40}
+      },
+      "elements": [
+        {
+          "id": "footer-column",
+          "elType": "column",
+          "settings": {"_column_size": 100},
+          "elements": [
+            {
+              "id": "footer-text",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<p style='text-align: center; color: #CCCCCC; font-size: 14px;'>© 2024 Bio Active Hair. Todos os direitos reservados.<br>Este produto não se destina a diagnosticar, tratar, curar ou prevenir qualquer doença.<br>CNPJ: 00.000.000/0000-00 | Contato: contato@bioactivehair.com.br</p>"
               }
             }
           ]
@@ -308,6 +1021,7 @@
   ],
   "page_settings": {
     "post_title": "Bio Active Hair - Landing Page",
-    "post_status": "publish"
+    "post_status": "publish",
+    "template": "elementor_canvas"
   }
 }
