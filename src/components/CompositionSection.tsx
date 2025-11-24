@@ -66,7 +66,7 @@ const CompositionSection = () => {
             return (
               <Card
                 key={index}
-                className="hover:shadow-lg transition-all duration-300 hover:scale-105 animate-fade-in overflow-hidden"
+                className="transition-all duration-300 hover:scale-105 animate-fade-in overflow-hidden"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="aspect-video overflow-hidden">
@@ -91,7 +91,7 @@ const CompositionSection = () => {
         </div>
 
         {/* ANVISA Badge */}
-        <div className="bg-background rounded-2xl p-8 md:p-12 shadow-xl">
+        <div className="bg-background rounded-2xl p-8 md:p-12">
           <div className="flex flex-col md:flex-row items-center justify-center gap-8 text-center md:text-left">
             <div className="flex-shrink-0">
               <div className="w-24 h-24 bg-primary rounded-full flex items-center justify-center">

@@ -57,7 +57,7 @@ const TestimonialsSection = () => {
           <CarouselContent>
             {allTestimonials.map((testimonial, index) => (
               <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                <Card className="h-full hover:shadow-xl transition-shadow duration-300">
+                <Card className="h-full transition-all duration-300">
                   <CardContent className="p-6 space-y-6">
                     {/* Avatar */}
                     <div className="flex items-center space-x-4">
