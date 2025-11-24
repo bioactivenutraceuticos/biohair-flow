@@ -41,7 +41,7 @@ const GuaranteeSection = () => {
                 size="lg"
                 className="bg-primary text-primary-foreground hover:bg-primary/90 text-lg px-8 py-6 h-auto whitespace-nowrap"
               >
-                Compre com Garantia!
+                COMPRE AGORA
               </Button>
             </div>
           </div>
