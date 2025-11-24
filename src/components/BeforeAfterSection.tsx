@@ -16,7 +16,7 @@ const BeforeAfterSection = () => {
 
         {/* Before/After Image */}
         <div className="max-w-5xl mx-auto">
-          <div className="rounded-2xl overflow-hidden shadow-2xl animate-fade-in">
+          <div className="rounded-2xl overflow-hidden animate-fade-in">
             <img
               src={beforeAfterImg}
               alt="Antes e depois do tratamento com Bio Active Hair"

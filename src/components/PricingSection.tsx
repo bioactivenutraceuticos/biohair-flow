@@ -2,6 +2,9 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Check } from "lucide-react";
+import product1Bottle from "@/assets/product-1-bottle.png";
+import product3Bottles from "@/assets/product-3-bottles.png";
+import product5Bottles from "@/assets/product-5-bottles.png";
 
 const PricingSection = () => {
   const plans = [
@@ -12,6 +15,7 @@ const PricingSection = () => {
       total: "R$197,00",
       discount: null,
       isRecommended: false,
+      image: product1Bottle,
     },
     {
       name: "Recomendado",
@@ -21,6 +25,7 @@ const PricingSection = () => {
       total: "R$297,00",
       discount: "49% OFF",
       isRecommended: true,
+      image: product3Bottles,
     },
     {
       name: "Avançado",
@@ -30,6 +35,7 @@ const PricingSection = () => {
       total: "R$397,00",
       discount: "60% OFF",
       isRecommended: false,
+      image: product5Bottles,
     },
   ];
 
@@ -50,8 +56,8 @@ const PricingSection = () => {
               key={index}
               className={`relative hover:scale-105 transition-all duration-300 ${
                 plan.isRecommended
-                  ? "shadow-2xl scale-105 bg-muted border-2 border-primary"
-                  : "shadow-lg"
+                  ? "scale-105 bg-muted border-2 border-primary"
+                  : ""
               }`}
             >
               {/* Discount Badge */}
@@ -69,6 +75,15 @@ const PricingSection = () => {
               )}
 
               <CardContent className="p-8 space-y-6 pt-10">
+                {/* Product Image */}
+                <div className="flex justify-center mb-4">
+                  <img
+                    src={plan.image}
+                    alt={`Bio Active Hair - ${plan.name}`}
+                    className="w-48 h-auto object-contain"
+                  />
+                </div>
+
                 {/* Plan Name */}
                 <div className="text-center">
                   <h3 className="text-2xl font-bold text-foreground mb-2">

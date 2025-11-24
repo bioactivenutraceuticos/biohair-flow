@@ -60,7 +60,7 @@ const HeroSection = () => {
 
           {/* Image */}
           <div className="relative animate-scale-in">
-            <div className="aspect-square rounded-2xl overflow-hidden bg-accent shadow-2xl">
+            <div className="aspect-square rounded-2xl overflow-hidden bg-accent">
               <img
                 src={heroImage}
                 alt="Mulher com cabelo saudável e brilhante"
@@ -68,7 +68,7 @@ const HeroSection = () => {
               />
             </div>
             {/* Floating Badge */}
-            <div className="absolute -bottom-4 -right-4 bg-primary text-primary-foreground px-6 py-4 rounded-xl shadow-lg">
+            <div className="absolute -bottom-4 -right-4 bg-primary text-primary-foreground px-6 py-4 rounded-xl">
               <p className="text-sm font-semibold">Aprovado pela</p>
               <p className="text-2xl font-bold">ANVISA</p>
             </div>

@@ -12,7 +12,7 @@ const GuaranteeSection = () => {
   return (
     <section id="garantia" className="py-16 px-4 bg-accent">
       <div className="container mx-auto">
-        <div className="bg-background rounded-2xl p-8 md:p-12 border-l-8 border-primary shadow-xl animate-fade-in">
+        <div className="bg-background rounded-2xl p-8 md:p-12 border-l-8 border-primary animate-fade-in">
           <div className="flex flex-col md:flex-row items-center gap-8">
             {/* Icon */}
             <div className="flex-shrink-0">

@@ -16,7 +16,7 @@ const ProductShowcase = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
           {/* Product Image */}
           <div className="relative animate-scale-in">
-            <div className="aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl">
+            <div className="aspect-[3/4] rounded-2xl overflow-hidden">
               <img
                 src={productBottle}
                 alt="Bio Active Hair - Frasco do Suplemento"
@@ -24,7 +24,7 @@ const ProductShowcase = () => {
               />
             </div>
             {/* Floating Badge */}
-            <div className="absolute top-4 right-4 bg-primary text-primary-foreground px-4 py-2 rounded-lg font-bold text-sm shadow-lg">
+            <div className="absolute top-4 right-4 bg-primary text-primary-foreground px-4 py-2 rounded-lg font-bold text-sm">
               ORIGINAL
             </div>
           </div>
