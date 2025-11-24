@@ -1,0 +1,313 @@
+{
+  "version": "2.0",
+  "title": "Bio Active Hair Landing Page",
+  "type": "page",
+  "content": [
+    {
+      "id": "hero-section",
+      "elType": "section",
+      "settings": {
+        "background_background": "gradient",
+        "background_color": "#ffffff",
+        "background_color_b": "#ffe6f5",
+        "background_gradient_angle": {"unit": "deg", "size": 135},
+        "padding": {"unit": "px", "top": "80", "bottom": "80"}
+      },
+      "elements": [
+        {
+          "id": "hero-column",
+          "elType": "column",
+          "settings": {"_column_size": 50},
+          "elements": [
+            {
+              "id": "hero-heading",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Recupere a Força e o Brilho dos Seus Cabelos em 30 Dias",
+                "header_size": "h1",
+                "title_color": "#333333",
+                "typography_font_size": {"unit": "px", "size": 48},
+                "typography_font_weight": "700"
+              }
+            },
+            {
+              "id": "hero-text",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "Fórmula exclusiva aprovada pela ANVISA com vitaminas e minerais essenciais para um cabelo forte, volumoso e saudável.",
+                "text_color": "#666666",
+                "typography_font_size": {"unit": "px", "size": 18}
+              }
+            },
+            {
+              "id": "hero-benefits",
+              "elType": "widget",
+              "widgetType": "icon-list",
+              "settings": {
+                "icon_list": [
+                  {"text": "✓ Liberado pela ANVISA", "icon": {"value": "fas fa-check-circle", "library": "fa-solid"}},
+                  {"text": "✓ Fórmula 100% natural", "icon": {"value": "fas fa-check-circle", "library": "fa-solid"}},
+                  {"text": "✓ Resultados em 30 dias", "icon": {"value": "fas fa-check-circle", "library": "fa-solid"}},
+                  {"text": "✓ Aprovado por especialistas", "icon": {"value": "fas fa-check-circle", "library": "fa-solid"}}
+                ],
+                "icon_color": "#CC007F",
+                "text_color": "#333333"
+              }
+            },
+            {
+              "id": "hero-button",
+              "elType": "widget",
+              "widgetType": "button",
+              "settings": {
+                "text": "Quero Cabelos Saudáveis Agora",
+                "link": {"url": "#precos"},
+                "button_type": "default",
+                "background_color": "#CC007F",
+                "button_text_color": "#ffffff",
+                "typography_font_size": {"unit": "px", "size": 18},
+                "typography_font_weight": "600",
+                "border_radius": {"unit": "px", "top": 8, "right": 8, "bottom": 8, "left": 8},
+                "padding": {"unit": "px", "top": 16, "right": 48, "bottom": 16, "left": 48}
+              }
+            }
+          ]
+        },
+        {
+          "id": "hero-image-column",
+          "elType": "column",
+          "settings": {"_column_size": 50},
+          "elements": [
+            {
+              "id": "hero-image",
+              "elType": "widget",
+              "widgetType": "image",
+              "settings": {
+                "image": {"url": "SUBSTITUA_PELO_URL_DA_IMAGEM_hero-product-composite.jpg"},
+                "image_size": "full",
+                "align": "center"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "problem-section",
+      "elType": "section",
+      "settings": {
+        "background_color": "#ffffff",
+        "padding": {"unit": "px", "top": "80", "bottom": "80"}
+      },
+      "elements": [
+        {
+          "id": "problem-column",
+          "elType": "column",
+          "settings": {"_column_size": 100},
+          "elements": [
+            {
+              "id": "problem-heading",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Você Está Cansada de Sofrer com Problemas Capilares?",
+                "header_size": "h2",
+                "align": "center",
+                "title_color": "#333333",
+                "typography_font_size": {"unit": "px", "size": 36}
+              }
+            },
+            {
+              "id": "problem-description",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "Sabemos como é frustrante lidar com cabelos fracos, quebradiços e sem vida. Cada dia olhando no espelho e vendo fios caindo, sem brilho e sem volume.",
+                "align": "center",
+                "text_color": "#666666"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "composition-section",
+      "elType": "section",
+      "settings": {
+        "background_color": "#f8f8f8",
+        "padding": {"unit": "px", "top": "80", "bottom": "80"}
+      },
+      "elements": [
+        {
+          "id": "composition-column",
+          "elType": "column",
+          "settings": {"_column_size": 100},
+          "elements": [
+            {
+              "id": "composition-heading",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Composição Exclusiva e Poderosa",
+                "header_size": "h2",
+                "align": "center",
+                "title_color": "#333333"
+              }
+            },
+            {
+              "id": "composition-text",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "Fórmula científica com ingredientes naturais testados e aprovados",
+                "align": "center",
+                "text_color": "#666666"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "testimonials-section",
+      "elType": "section",
+      "settings": {
+        "background_color": "#ffffff",
+        "padding": {"unit": "px", "top": "80", "bottom": "80"}
+      },
+      "elements": [
+        {
+          "id": "testimonials-column",
+          "elType": "column",
+          "settings": {"_column_size": 100},
+          "elements": [
+            {
+              "id": "testimonials-heading",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "O Que Dizem Nossas Clientes",
+                "header_size": "h2",
+                "align": "center",
+                "title_color": "#333333"
+              }
+            },
+            {
+              "id": "testimonial-1",
+              "elType": "widget",
+              "widgetType": "testimonial",
+              "settings": {
+                "testimonial_content": "Meus cabelos estavam horríveis, caindo muito. Depois de usar Bio Active Hair por 2 meses, a diferença é incrível! Estão mais fortes e brilhantes.",
+                "testimonial_name": "Maria Silva",
+                "testimonial_job": "São Paulo, SP",
+                "testimonial_image": {"url": "SUBSTITUA_PELO_URL_DA_IMAGEM_testimonial-1.jpg"}
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pricing-section",
+      "elType": "section",
+      "settings": {
+        "background_color": "#f8f8f8",
+        "padding": {"unit": "px", "top": "80", "bottom": "80"},
+        "custom_id": "precos"
+      },
+      "elements": [
+        {
+          "id": "pricing-column",
+          "elType": "column",
+          "settings": {"_column_size": 100},
+          "elements": [
+            {
+              "id": "pricing-heading",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Escolha Seu Plano Ideal",
+                "header_size": "h2",
+                "align": "center",
+                "title_color": "#333333"
+              }
+            },
+            {
+              "id": "pricing-description",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "Quanto mais você compra, mais economiza! Aproveite nossas ofertas especiais.",
+                "align": "center",
+                "text_color": "#666666"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "faq-section",
+      "elType": "section",
+      "settings": {
+        "background_color": "#ffffff",
+        "padding": {"unit": "px", "top": "80", "bottom": "80"}
+      },
+      "elements": [
+        {
+          "id": "faq-column",
+          "elType": "column",
+          "settings": {"_column_size": 100},
+          "elements": [
+            {
+              "id": "faq-heading",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Perguntas Frequentes",
+                "header_size": "h2",
+                "align": "center",
+                "title_color": "#333333"
+              }
+            },
+            {
+              "id": "faq-accordion",
+              "elType": "widget",
+              "widgetType": "accordion",
+              "settings": {
+                "tabs": [
+                  {
+                    "tab_title": "Como devo tomar Bio Active Hair?",
+                    "tab_content": "Recomendamos tomar 2 cápsulas por dia, preferencialmente junto com as refeições."
+                  },
+                  {
+                    "tab_title": "Em quanto tempo verei resultados?",
+                    "tab_content": "Os primeiros resultados aparecem em 30 dias, mas recomendamos o uso contínuo por pelo menos 90 dias para resultados completos."
+                  },
+                  {
+                    "tab_title": "Bio Active Hair tem efeitos colaterais?",
+                    "tab_content": "Não. Bio Active Hair é feito com ingredientes naturais e é seguro para consumo. Aprovado pela ANVISA."
+                  },
+                  {
+                    "tab_title": "Posso usar se estiver grávida ou amamentando?",
+                    "tab_content": "Recomendamos consultar seu médico antes de iniciar qualquer suplementação durante gravidez ou amamentação."
+                  },
+                  {
+                    "tab_title": "A compra é segura?",
+                    "tab_content": "Sim! Utilizamos criptografia SSL e seus dados estão 100% protegidos. Oferecemos garantia de 30 dias."
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "page_settings": {
+    "post_title": "Bio Active Hair - Landing Page",
+    "post_status": "publish"
+  }
+}
