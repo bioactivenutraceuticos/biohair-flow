@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
-import heroImage from "@/assets/hero-woman.jpg";
+import heroImage from "@/assets/hero-product-composite.jpg";
 
 const HeroSection = () => {
   const scrollToPricing = () => {
