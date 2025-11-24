@@ -69,7 +69,7 @@ const ProductShowcase = () => {
               size="lg"
               className="bg-primary text-primary-foreground hover:bg-primary/90 w-full md:w-auto"
             >
-              Garanta o Seu Agora
+              COMPRE AGORA
             </Button>
           </div>
         </div>

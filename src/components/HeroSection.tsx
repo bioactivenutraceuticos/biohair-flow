@@ -54,7 +54,7 @@ const HeroSection = () => {
               size="lg"
               className="bg-primary text-primary-foreground hover:bg-primary/90 text-lg px-8 py-6 h-auto animate-pulse-glow"
             >
-              Quero parar de sofrer com meu cabelo!
+              COMPRE AGORA
             </Button>
           </div>
 
