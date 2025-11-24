@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
-import heroImage from "@/assets/hero-product-composite.jpg";
+import heroImage from "@/assets/hero-product-real.png";
 
 const HeroSection = () => {
   const scrollToPricing = () => {
@@ -13,7 +13,7 @@ const HeroSection = () => {
   return (
     <section
       id="inicio"
-      className="pt-32 pb-20 px-4 bg-gradient-to-br from-background to-accent"
+      className="pt-32 pb-20 px-4 bg-gradient-to-br from-[#fce7f3] via-background to-accent"
     >
       <div className="container mx-auto">
         <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -58,19 +58,19 @@ const HeroSection = () => {
             </Button>
           </div>
 
-          {/* Image */}
-          <div className="relative animate-scale-in">
-            <div className="aspect-square rounded-2xl overflow-hidden bg-accent">
+          {/* Product Image */}
+          <div className="relative animate-scale-in flex justify-center">
+            <div className="relative">
               <img
                 src={heroImage}
-                alt="Mulher com cabelo saudável e brilhante"
-                className="w-full h-full object-cover"
+                alt="Bio Active Hair - Produto Original"
+                className="w-full max-w-md h-auto object-contain drop-shadow-2xl"
               />
-            </div>
-            {/* Floating Badge */}
-            <div className="absolute -bottom-4 -right-4 bg-primary text-primary-foreground px-6 py-4 rounded-xl">
-              <p className="text-sm font-semibold">Aprovado pela</p>
-              <p className="text-2xl font-bold">ANVISA</p>
+              {/* Floating Badge */}
+              <div className="absolute -bottom-4 -right-4 bg-primary text-primary-foreground px-6 py-4 rounded-xl">
+                <p className="text-sm font-semibold">Aprovado pela</p>
+                <p className="text-2xl font-bold">ANVISA</p>
+              </div>
             </div>
           </div>
         </div>
