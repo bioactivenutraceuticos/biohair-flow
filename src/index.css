@@ -17,20 +17,20 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 20%;
 
-    /* Bio Active Primary Green */
-    --primary: 142 71% 45%;
+    /* Bio Active Primary Pink */
+    --primary: 326 100% 40%;
     --primary-foreground: 0 0% 100%;
 
-    /* Bio Active Secondary Green */
-    --secondary: 88 50% 53%;
-    --secondary-foreground: 0 0% 20%;
+    /* Bio Active Secondary Pink */
+    --secondary: 326 80% 60%;
+    --secondary-foreground: 0 0% 100%;
 
     /* Subtle backgrounds */
     --muted: 0 0% 96%;
     --muted-foreground: 0 0% 45%;
 
-    /* Light green accent */
-    --accent: 130 42% 94%;
+    /* Light pink accent */
+    --accent: 326 100% 95%;
     --accent-foreground: 0 0% 20%;
 
     /* Urgency red for discounts */
@@ -44,9 +44,9 @@ All colors MUST be HSL.
     --radius: 0.5rem;
 
     /* Custom tokens for Bio Active */
-    --bio-green-primary: 142 71% 45%;
-    --bio-green-secondary: 88 50% 53%;
-    --bio-green-light: 130 42% 94%;
+    --bio-pink-primary: 326 100% 40%;
+    --bio-pink-secondary: 326 80% 60%;
+    --bio-pink-light: 326 100% 95%;
     --bio-discount: 0 73% 68%;
     --bio-dark: 0 0% 20%;
     --bio-light: 0 0% 96%;
@@ -62,16 +62,16 @@ All colors MUST be HSL.
     --popover: 0 0% 20%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 142 71% 45%;
+    --primary: 326 100% 40%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 88 50% 53%;
-    --secondary-foreground: 0 0% 20%;
+    --secondary: 326 80% 60%;
+    --secondary-foreground: 0 0% 100%;
 
     --muted: 0 0% 15%;
     --muted-foreground: 0 0% 65%;
 
-    --accent: 130 42% 15%;
+    --accent: 326 100% 15%;
     --accent-foreground: 0 0% 98%;
 
     --destructive: 0 73% 68%;

@@ -1,6 +1,13 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Sparkles, Leaf, Droplet, Star, Pill, Heart } from "lucide-react";
+import biotinImg from "@/assets/ingredients-biotin.jpg";
+import collagenImg from "@/assets/ingredients-collagen.jpg";
+import vitaminEImg from "@/assets/ingredients-vitamin-e.jpg";
+import zincImg from "@/assets/ingredients-zinc.jpg";
+import vitaminCImg from "@/assets/ingredients-vitamin-c.jpg";
+import folicAcidImg from "@/assets/ingredients-folic-acid.jpg";
+import anvisaSeal from "@/assets/anvisa-seal.jpg";
 
 const CompositionSection = () => {
   const ingredients = [
@@ -8,31 +15,37 @@ const CompositionSection = () => {
       icon: Sparkles,
       name: "Biotina",
       benefit: "Fortalece os fios e estimula o crescimento",
+      image: biotinImg,
     },
     {
       icon: Leaf,
       name: "Colágeno Hidrolisado",
       benefit: "Melhora a elasticidade e reduz a quebra",
+      image: collagenImg,
     },
     {
       icon: Droplet,
       name: "Vitamina E",
       benefit: "Antioxidante poderoso para proteção capilar",
+      image: vitaminEImg,
     },
     {
       icon: Star,
       name: "Zinco",
       benefit: "Previne a queda e fortalece o bulbo capilar",
+      image: zincImg,
     },
     {
       icon: Pill,
       name: "Vitamina C",
       benefit: "Favorece a absorção de nutrientes essenciais",
+      image: vitaminCImg,
     },
     {
       icon: Heart,
       name: "Ácido Fólico",
       benefit: "Promove o crescimento saudável dos fios",
+      image: folicAcidImg,
     },
   ];
 
@@ -53,9 +66,16 @@ const CompositionSection = () => {
             return (
               <Card
                 key={index}
-                className="hover:shadow-lg transition-all duration-300 hover:scale-105 animate-fade-in"
+                className="hover:shadow-lg transition-all duration-300 hover:scale-105 animate-fade-in overflow-hidden"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
+                <div className="aspect-video overflow-hidden">
+                  <img
+                    src={ingredient.image}
+                    alt={ingredient.name}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
                 <CardContent className="p-6 space-y-4">
                   <div className="w-12 h-12 bg-accent rounded-lg flex items-center justify-center">
                     <Icon className="h-6 w-6 text-primary" />
@@ -87,9 +107,11 @@ const CompositionSection = () => {
               </p>
             </div>
             <div className="flex-shrink-0">
-              <div className="w-32 h-32 bg-accent rounded-xl flex items-center justify-center">
-                <span className="text-xs text-center font-bold text-primary">ANVISA<br/>APROVADO</span>
-              </div>
+              <img
+                src={anvisaSeal}
+                alt="Selo ANVISA"
+                className="w-32 h-32 object-contain rounded-xl"
+              />
             </div>
           </div>
         </div>

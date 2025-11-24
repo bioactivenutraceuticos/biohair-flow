@@ -7,6 +7,9 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { Star } from "lucide-react";
+import testimonial1 from "@/assets/testimonial-1.jpg";
+import testimonial2 from "@/assets/testimonial-2.jpg";
+import testimonial3 from "@/assets/testimonial-3.jpg";
 
 const TestimonialsSection = () => {
   const testimonials = [
@@ -14,16 +17,19 @@ const TestimonialsSection = () => {
       name: "Gláucia",
       text: "Eu estava literalmente com um buraco na cabeça de tanto cabelo que tinha caído e com Bio Active Hair consegui crescer meu cabelo e conquistar novamente minha autoestima.",
       rating: 5,
+      image: testimonial1,
     },
     {
       name: "Verônica",
       text: "Meu cabelo estava caindo bastante e isso estava me deixando muito chateada. Busquei na internet por soluções e encontrei o Bio Active Hair, comprei e além de ter tido um resultado incrível no meu cabelo, minha pele do rosto mudou pra melhor completamente e minhas unhas pararam de quebrar.",
       rating: 5,
+      image: testimonial2,
     },
     {
       name: "Lorena",
       text: "Queria um suplemento que me ajudasse com o crescimento do meu cabelo, fazia já quase dois anos que deixava ele crescer e ele tinha crescido pouquíssimo. Pedi o Bio Active Hair e depois de alguns meses fazendo o uso contínuo meu cabelo cresceu muito, muito mesmo.",
       rating: 5,
+      image: testimonial3,
     },
   ];
 
@@ -55,10 +61,12 @@ const TestimonialsSection = () => {
                   <CardContent className="p-6 space-y-6">
                     {/* Avatar */}
                     <div className="flex items-center space-x-4">
-                      <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center">
-                        <span className="text-2xl font-bold text-primary">
-                          {testimonial.name[0]}
-                        </span>
+                      <div className="w-16 h-16 rounded-full overflow-hidden flex-shrink-0">
+                        <img
+                          src={testimonial.image}
+                          alt={testimonial.name}
+                          className="w-full h-full object-cover"
+                        />
                       </div>
                       <div>
                         <h4 className="font-bold text-foreground">

@@ -48,9 +48,9 @@ export default {
           foreground: "hsl(var(--card-foreground))",
         },
         bio: {
-          primary: "hsl(var(--bio-green-primary))",
-          secondary: "hsl(var(--bio-green-secondary))",
-          light: "hsl(var(--bio-green-light))",
+          primary: "hsl(var(--bio-pink-primary))",
+          secondary: "hsl(var(--bio-pink-secondary))",
+          light: "hsl(var(--bio-pink-light))",
           discount: "hsl(var(--bio-discount))",
           dark: "hsl(var(--bio-dark))",
           gray: "hsl(var(--bio-light))",

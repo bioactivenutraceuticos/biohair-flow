@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
+import heroImage from "@/assets/hero-woman.jpg";
 
 const HeroSection = () => {
   const scrollToPricing = () => {
@@ -61,8 +62,8 @@ const HeroSection = () => {
           <div className="relative animate-scale-in">
             <div className="aspect-square rounded-2xl overflow-hidden bg-accent shadow-2xl">
               <img
-                src="/placeholder.svg"
-                alt="Mulher com cabelo saudável"
+                src={heroImage}
+                alt="Mulher com cabelo saudável e brilhante"
                 className="w-full h-full object-cover"
               />
             </div>
