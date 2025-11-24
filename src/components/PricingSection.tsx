@@ -76,11 +76,11 @@ const PricingSection = () => {
 
               <CardContent className="p-8 space-y-6 pt-10">
                 {/* Product Image */}
-                <div className="flex justify-center mb-4">
+                <div className="flex justify-center mb-4 h-56">
                   <img
                     src={plan.image}
                     alt={`Bio Active Hair - ${plan.name}`}
-                    className="w-48 h-auto object-contain"
+                    className="h-full w-auto object-contain"
                   />
                 </div>
 
