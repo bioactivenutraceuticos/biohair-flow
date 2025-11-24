@@ -1,27 +1,67 @@
+import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Sparkles } from "lucide-react";
+import { Sparkles, Leaf, Droplet, Star, Pill, Heart } from "lucide-react";
+import vitaminEImg from "@/assets/ingredients-vitamin-e.jpg";
+import zincImg from "@/assets/ingredients-zinc.jpg";
+import vitaminCImg from "@/assets/ingredients-vitamin-c.jpg";
+import collagenImg from "@/assets/ingredients-collagen.jpg";
+import biotinImg from "@/assets/ingredients-biotin.jpg";
+import folicAcidImg from "@/assets/ingredients-folic-acid.jpg";
 import anvisaSeal from "@/assets/anvisa-seal.jpg";
 
 const CompositionSection = () => {
-  const ingredients = [
-    "Ácido Hialurônico",
-    "L-Cisteína",
+  const mainIngredients = [
+    {
+      icon: Droplet,
+      name: "Vitamina E (Tocoferol)",
+      benefit: "Antioxidante poderoso para proteção capilar",
+      image: vitaminEImg,
+    },
+    {
+      icon: Star,
+      name: "Zinco",
+      benefit: "Previne a queda e fortalece o bulbo capilar",
+      image: zincImg,
+    },
+    {
+      icon: Pill,
+      name: "Vitamina C (Ác. Ascórbico)",
+      benefit: "Favorece a absorção de nutrientes essenciais",
+      image: vitaminCImg,
+    },
+    {
+      icon: Leaf,
+      name: "L-Cisteína",
+      benefit: "Aminoácido essencial para formação da queratina",
+      image: collagenImg,
+    },
+    {
+      icon: Sparkles,
+      name: "Ácido Hialurônico",
+      benefit: "Hidratação profunda e retenção de água nos fios",
+      image: biotinImg,
+    },
+    {
+      icon: Heart,
+      name: "Silício",
+      benefit: "Fortalece a estrutura capilar e aumenta brilho",
+      image: folicAcidImg,
+    },
+  ];
+
+  const additionalIngredients = [
     "Astaxantina",
     "L-Arginina",
     "Metilsulfonilmetano",
-    "Silício",
-    "Vitamina E (Tocoferol)",
     "Vitamina B1 (Tiamina)",
     "Vitamina B2 (Riboflavina)",
     "Vitamina B12 (Cobalamina)",
     "Vitamina A (Retinol)",
     "Vitamina D (Colecalciferol)",
-    "Vitamina C (Ác. Ascórbico)",
     "Cromo",
     "Selênio",
     "Cobre",
     "Ferro",
-    "Zinco",
   ];
 
   return (
@@ -34,20 +74,52 @@ const CompositionSection = () => {
           </h2>
         </div>
 
-        {/* Ingredients Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-16">
-          {ingredients.map((ingredient, index) => (
-            <div
-              key={index}
-              className="bg-background rounded-lg p-4 text-center border border-border hover:border-primary transition-colors animate-fade-in"
-              style={{ animationDelay: `${index * 0.05}s` }}
-            >
-              <Sparkles className="w-6 h-6 text-primary mx-auto mb-2" />
-              <p className="text-sm font-medium text-foreground">
+        {/* Main Ingredients Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          {mainIngredients.map((ingredient, index) => {
+            const Icon = ingredient.icon;
+            return (
+              <Card
+                key={index}
+                className="transition-all duration-300 hover:scale-105 animate-fade-in overflow-hidden"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div className="aspect-video overflow-hidden">
+                  <img
+                    src={ingredient.image}
+                    alt={ingredient.name}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <CardContent className="p-6 space-y-4">
+                  <div className="w-12 h-12 bg-accent rounded-lg flex items-center justify-center">
+                    <Icon className="h-6 w-6 text-primary" />
+                  </div>
+                  <h4 className="text-xl font-bold text-foreground">
+                    {ingredient.name}
+                  </h4>
+                  <p className="text-muted-foreground">{ingredient.benefit}</p>
+                </CardContent>
+              </Card>
+            );
+          })}
+        </div>
+
+        {/* Additional Ingredients */}
+        <div className="text-center mb-8">
+          <h3 className="text-xl font-semibold text-foreground mb-4">
+            E mais:
+          </h3>
+          <div className="flex flex-wrap justify-center gap-3">
+            {additionalIngredients.map((ingredient, index) => (
+              <span
+                key={index}
+                className="bg-background border border-border rounded-full px-4 py-2 text-sm text-foreground hover:border-primary transition-colors"
+              >
                 {ingredient}
-              </p>
-            </div>
-          ))}
+              </span>
+            ))}
+          </div>
         </div>
 
         {/* ANVISA Badge */}
