@@ -4,6 +4,7 @@ import ProblemSolution from "@/components/ProblemSolution";
 import GuaranteeSection from "@/components/GuaranteeSection";
 import ProductShowcase from "@/components/ProductShowcase";
 import BeforeAfterSection from "@/components/BeforeAfterSection";
+import CertificationsSection from "@/components/CertificationsSection";
 import CompositionSection from "@/components/CompositionSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import PricingSection from "@/components/PricingSection";
@@ -18,6 +19,7 @@ const Index = () => {
       <ProblemSolution />
       <ProductShowcase />
       <BeforeAfterSection />
+      <CertificationsSection />
       <GuaranteeSection />
       <CompositionSection />
       <TestimonialsSection />
