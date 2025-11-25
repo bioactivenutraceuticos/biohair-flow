@@ -50,7 +50,7 @@ const FAQSection = () => {
             <AccordionItem
               key={index}
               value={`item-${index}`}
-              className="bg-background rounded-lg px-6 border border-border"
+              className="bg-muted rounded-lg px-6 border-none"
             >
               <AccordionTrigger className="text-left text-lg font-semibold text-foreground hover:no-underline">
                 {faq.question}
