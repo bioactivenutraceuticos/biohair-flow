@@ -1,10 +1,11 @@
-name: Deploy to WordPress
+name: Deploy to WordPress (DESABILITADO)
 
 on:
-  push:
-    branches:
-      - main  # ou master, dependendo da sua branch principal
-  workflow_dispatch:  # Permite executar manualmente
+  # Desabilitado - usando deploy direto na Hostinger
+  # push:
+  #   branches:
+  #     - main
+  workflow_dispatch:  # Permite executar manualmente se necessário
 
 jobs:
   build-and-deploy:
