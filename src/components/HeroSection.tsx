@@ -20,11 +20,11 @@ const HeroSection = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Text Content */}
           <div className="space-y-8 animate-fade-in">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-foreground leading-tight">
-              ESTÁ TENDO<br />
-              DIFICULDADE PARA<br />
-              <span className="text-primary">RESOLVER SEU PROBLEMA</span><br />
-              DE QUEDA CAPILAR?
+            <h1 className="text-4xl md:text-5xl lg:text-6xl text-foreground leading-tight">
+              <span className="font-bold">ESTÁ TENDO</span><br />
+              <span className="font-bold">DIFICULDADE PARA</span><br />
+              <span className="text-primary font-black">RESOLVER SEU PROBLEMA</span><br />
+              <span className="font-bold">DE QUEDA CAPILAR?</span>
             </h1>
             <h3 className="text-xl md:text-2xl text-primary font-semibold">
               ADQUIRA AGORA O SEU E VEJA VOCÊ MESMA!!!

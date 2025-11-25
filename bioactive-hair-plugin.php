@@ -78,6 +78,39 @@ function bioactive_hair_enqueue_assets() {
             #root [data-radix-collection-item] {
                 border: none !important;
             }
+            
+            /* Header do accordion */
+            #root h3[data-orientation='vertical'] {
+                display: flex !important;
+                width: 100% !important;
+            }
+            
+            /* Alinhamento do accordion trigger */
+            #root button[data-state] {
+                display: flex !important;
+                flex-direction: row !important;
+                align-items: center !important;
+                justify-content: space-between !important;
+                width: 100% !important;
+                text-align: left !important;
+                padding: 1rem 0 !important;
+                gap: 1rem !important;
+            }
+            
+            /* Ícone do accordion - forçar à direita */
+            #root button[data-state] svg {
+                order: 2 !important;
+                margin-left: auto !important;
+                flex-shrink: 0 !important;
+                min-width: 1rem !important;
+            }
+            
+            /* Texto do accordion - forçar à esquerda */
+            #root button[data-state] > *:not(svg) {
+                order: 1 !important;
+                flex: 1 !important;
+                text-align: left !important;
+            }
         ";
         wp_add_inline_style( 'bioactive-hair-main', $custom_css );
     }
