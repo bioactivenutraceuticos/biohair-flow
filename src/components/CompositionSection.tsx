@@ -84,11 +84,11 @@ const CompositionSection = () => {
                 className="transition-all duration-300 hover:scale-105 animate-fade-in overflow-hidden"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="aspect-video overflow-hidden">
+                <div className="aspect-video overflow-hidden bg-gradient-to-br from-pink-100 to-pink-200">
                   <img
                     src={ingredient.image}
                     alt={ingredient.name}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-contain"
                   />
                 </div>
                 <CardContent className="p-6 space-y-4">
