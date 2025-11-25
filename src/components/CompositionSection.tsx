@@ -7,7 +7,7 @@ import vitaminCImg from "@/assets/ingredients-vitamin-c.jpg";
 import collagenImg from "@/assets/ingredients-collagen.jpg";
 import biotinImg from "@/assets/ingredients-biotin.jpg";
 import folicAcidImg from "@/assets/ingredients-folic-acid.jpg";
-import anvisaSeal from "@/assets/anvisa-seal.jpg";
+import anvisaSeal from "@/assets/Selo AVNISA - 1.png";
 
 const CompositionSection = () => {
   const mainIngredients = [

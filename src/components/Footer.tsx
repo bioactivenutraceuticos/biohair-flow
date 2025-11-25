@@ -1,4 +1,5 @@
 import { Phone, MessageCircle, Facebook, Instagram } from "lucide-react";
+import logo from "@/assets/BIO ACTIVE - logotipo_NEGATIVO.png";
 
 const Footer = () => {
   return (
@@ -8,7 +9,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Column 1: Logo & Manufacturing */}
           <div className="space-y-4">
-            <h3 className="text-2xl font-bold text-primary">Bio Active Hair</h3>
+            <img src={logo} alt="Bio Active Hair" className="h-16 w-auto" />
             <div className="space-y-2">
               <h4 className="font-bold text-background uppercase text-sm">
                 Fabricação e Distribuição
