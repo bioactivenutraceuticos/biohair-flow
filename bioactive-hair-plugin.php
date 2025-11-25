@@ -3,7 +3,7 @@
  * Plugin Name: BioActive Hair Plugin
  * Plugin URI: https://bioactivehair.com/
  * Description: Integra o conteúdo do projeto BioActive Hair gerado pelo Lovable.
- * Version: 1.0.0
+ * Version: 1.0.1
  * Author: Sua Agência
  * License: GPL2
  */
@@ -16,17 +16,33 @@ define( 'BIOACTIVE_HAIR_PLUGIN_PATH', plugin_dir_path( __FILE__ ) );
 define( 'BIOACTIVE_HAIR_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 
 function bioactive_hair_enqueue_assets() {
-    $version = '1.0.0'; // Atualize este número quando fizer deploy de uma nova versão
+    $version = '1.0.1'; // Atualize este número quando fizer deploy de uma nova versão
     
-    // Carrega CSS principal
+    // Carrega CSS principal com prioridade alta
     $css_file = BIOACTIVE_HAIR_PLUGIN_PATH . 'assets/main.css';
     if ( file_exists( $css_file ) ) {
         wp_enqueue_style(
             'bioactive-hair-main',
             BIOACTIVE_HAIR_PLUGIN_URL . 'assets/main.css',
             array(),
-            $version
+            $version,
+            'all'
         );
+        
+        // Adiciona CSS inline para sobrescrever estilos do tema
+        $custom_css = "
+            #root * {
+                font-family: 'Inter', sans-serif !important;
+            }
+            #root h1, #root h2, #root h3, #root h4, #root h5, #root h6 {
+                font-family: 'Poppins', sans-serif !important;
+                font-weight: 900 !important;
+            }
+            #root button {
+                box-shadow: none !important;
+            }
+        ";
+        wp_add_inline_style( 'bioactive-hair-main', $custom_css );
     }
     
     // Carrega JS principal
