@@ -49,7 +49,7 @@ const PrivacyPolicy = () => {
               <p><strong>Razão Social:</strong> X1 Agência</p>
               <p><strong>CNPJ:</strong> 33.109.665/0001-97 (temporário)</p>
               <p><strong>Endereço:</strong> Rua Vereador Alexandre Antonello, 323 - Dois Vizinhos - PR</p>
-              <p><strong>Email:</strong> bioactivenutraceuticos@gmail.com</p>
+              <p><strong>Email:</strong> contato@bioactivehair.com</p>
               <p><strong>Telefone:</strong> +55 (46) 92001-6522</p>
             </div>
           </section>
@@ -169,7 +169,7 @@ const PrivacyPolicy = () => {
               <li>Opor-se ao tratamento de dados</li>
             </ul>
             <p className="mt-4">
-              Para exercer seus direitos, entre em contato conosco através do email: bioactivenutraceuticos@gmail.com
+              Para exercer seus direitos, entre em contato conosco através do email: contato@bioactivehair.com
             </p>
           </section>
 
@@ -199,7 +199,7 @@ const PrivacyPolicy = () => {
               Se você tiver dúvidas sobre esta Política de Privacidade ou sobre o tratamento de seus dados pessoais, entre em contato conosco:
             </p>
             <div className="bg-muted p-6 rounded-lg mt-4">
-              <p><strong>Email:</strong> bioactivenutraceuticos@gmail.com</p>
+              <p><strong>Email:</strong> contato@bioactivehair.com</p>
               <p><strong>Telefone:</strong> +55 (46) 92001-6522</p>
               <p><strong>WhatsApp:</strong> (37) 3351-5181</p>
             </div>

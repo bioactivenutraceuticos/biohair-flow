@@ -46,7 +46,7 @@ const TermsOfUse = () => {
               <p><strong>Razão Social:</strong> X1 Agência</p>
               <p><strong>CNPJ:</strong> 33.109.665/0001-97 (temporário)</p>
               <p><strong>Endereço:</strong> Rua Vereador Alexandre Antonello, 323 - Dois Vizinhos - PR</p>
-              <p><strong>Email:</strong> bioactivenutraceuticos@gmail.com</p>
+              <p><strong>Email:</strong> contato@bioactivehair.com</p>
               <p><strong>Telefone:</strong> +55 (46) 92001-6522</p>
             </div>
           </section>
@@ -158,7 +158,7 @@ const TermsOfUse = () => {
               6.3 Processo de Devolução
             </h3>
             <p>
-              Para solicitar devolução, entre em contato através do email bioactivenutraceuticos@gmail.com ou WhatsApp (37) 3351-5181 informando:
+              Para solicitar devolução, entre em contato através do email contato@bioactivehair.com ou WhatsApp (37) 3351-5181 informando:
             </p>
             <ul className="list-disc list-inside mt-2 space-y-2">
               <li>Número do pedido</li>
@@ -273,7 +273,7 @@ const TermsOfUse = () => {
               Se você tiver dúvidas sobre estes Termos de Uso, entre em contato conosco:
             </p>
             <div className="bg-muted p-6 rounded-lg mt-4">
-              <p><strong>Email:</strong> bioactivenutraceuticos@gmail.com</p>
+              <p><strong>Email:</strong> contato@bioactivehair.com</p>
               <p><strong>Telefone:</strong> +55 (46) 92001-6522</p>
               <p><strong>WhatsApp:</strong> (37) 3351-5181</p>
               <p><strong>Endereço:</strong> Rua Vereador Alexandre Antonello, 323 - Dois Vizinhos - PR</p>
