@@ -3,7 +3,7 @@
  * Plugin Name: BioActive Hair Plugin
  * Plugin URI: https://bioactivehair.com/
  * Description: Integra o conteúdo do projeto BioActive Hair gerado pelo Lovable.
- * Version: 1.0.2
+ * Version: 1.0.3
  * Author: Sua Agência
  * License: GPL2
  */
@@ -16,7 +16,7 @@ define( 'BIOACTIVE_HAIR_PLUGIN_PATH', plugin_dir_path( __FILE__ ) );
 define( 'BIOACTIVE_HAIR_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 
 function bioactive_hair_enqueue_assets() {
-    $version = '1.0.2'; // Atualize este número quando fizer deploy de uma nova versão
+    $version = '1.0.3'; // Atualize este número quando fizer deploy de uma nova versão
     
     // Carrega CSS principal com prioridade alta
     $css_file = BIOACTIVE_HAIR_PLUGIN_PATH . 'assets/main.css';
@@ -67,16 +67,18 @@ function bioactive_hair_enqueue_assets() {
                 height: auto !important;
             }
             
-            /* FAQ - Fundo cinza sem bordas */
-            #root [data-state] {
+            /* FAQ - Fundo cinza sem bordas com máxima especificidade */
+            .bioactive-hair-container #root [data-state],
+            div#root [data-state],
+            .bioactive-hair-container #root [data-radix-collection-item],
+            div#root [data-radix-collection-item] {
                 background-color: hsl(0 0% 96%) !important;
                 border: none !important;
+                border-top: none !important;
+                border-bottom: none !important;
+                border-left: none !important;
+                border-right: none !important;
                 border-radius: 0.5rem !important;
-            }
-            
-            /* Remove bordas do accordion */
-            #root [data-radix-collection-item] {
-                border: none !important;
             }
             
             /* Header do accordion */
@@ -85,8 +87,11 @@ function bioactive_hair_enqueue_assets() {
                 width: 100% !important;
             }
             
-            /* Alinhamento do accordion trigger */
-            #root button[data-state] {
+            /* Alinhamento do accordion trigger com máxima especificidade */
+            .bioactive-hair-container #root button[data-state],
+            div#root button[data-state],
+            .bioactive-hair-container #root button[data-radix-accordion-trigger],
+            div#root button[data-radix-accordion-trigger] {
                 display: flex !important;
                 flex-direction: row !important;
                 align-items: center !important;
@@ -95,6 +100,8 @@ function bioactive_hair_enqueue_assets() {
                 text-align: left !important;
                 padding: 1rem 0 !important;
                 gap: 1rem !important;
+                font-size: 1.125rem !important;
+                font-weight: 600 !important;
             }
             
             /* Ícone do accordion - forçar à direita */
@@ -112,19 +119,28 @@ function bioactive_hair_enqueue_assets() {
                 text-align: left !important;
             }
             
-            /* Títulos - garantir font-weight correto */
-            #root h1 span.font-black,
-            #root h2 span.font-black {
+            /* Títulos - garantir font-weight correto com máxima especificidade */
+            .bioactive-hair-container #root h1 span.font-black,
+            .bioactive-hair-container #root h2 span.font-black,
+            .bioactive-hair-container #root h3 span.font-black,
+            div#root h1 span.font-black,
+            div#root h2 span.font-black {
                 font-weight: 900 !important;
             }
             
-            #root h1 span.font-bold,
-            #root h2 span.font-bold {
+            .bioactive-hair-container #root h1 span.font-bold,
+            .bioactive-hair-container #root h2 span.font-bold,
+            .bioactive-hair-container #root h3 span.font-bold,
+            div#root h1 span.font-bold,
+            div#root h2 span.font-bold {
                 font-weight: 700 !important;
             }
             
-            /* Cor rosa dos títulos */
-            #root .text-primary {
+            /* Cor rosa dos títulos com máxima especificidade */
+            .bioactive-hair-container #root .text-primary,
+            .bioactive-hair-container #root span.text-primary,
+            div#root .text-primary,
+            div#root span.text-primary {
                 color: hsl(326 100% 40%) !important;
             }
             
