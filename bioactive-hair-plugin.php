@@ -111,6 +111,44 @@ function bioactive_hair_enqueue_assets() {
                 flex: 1 !important;
                 text-align: left !important;
             }
+            
+            /* Títulos - garantir font-weight correto */
+            #root h1 span.font-black,
+            #root h2 span.font-black {
+                font-weight: 900 !important;
+            }
+            
+            #root h1 span.font-bold,
+            #root h2 span.font-bold {
+                font-weight: 700 !important;
+            }
+            
+            /* Cor rosa dos títulos */
+            #root .text-primary {
+                color: hsl(326 100% 40%) !important;
+            }
+            
+            /* Cards de preço - garantir alinhamento */
+            #root [class*='Card'] {
+                display: flex !important;
+                flex-direction: column !important;
+            }
+            
+            /* Botões - garantir estilo correto */
+            #root button[class*='Button'] {
+                border-radius: 9999px !important;
+                font-weight: 600 !important;
+            }
+            
+            /* FAQ - garantir espaçamento */
+            #root [data-radix-collection-item] {
+                margin-bottom: 1rem !important;
+            }
+            
+            /* Garantir que textos não sejam sobrescritos pelo tema */
+            #root p, #root span, #root div {
+                line-height: inherit !important;
+            }
         ";
         wp_add_inline_style( 'bioactive-hair-main', $custom_css );
     }
