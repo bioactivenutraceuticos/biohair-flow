@@ -107,7 +107,7 @@ const PricingSection = () => {
                       POR APENAS 12x DE
                     </span>
                   </div>
-                  <p className="text-6xl font-black text-primary leading-none" style={{ fontWeight: 900 }}>
+                  <p className="text-6xl text-primary leading-none" style={{ fontWeight: 900 }}>
                     {plan.installments.split(' ').pop()}
                   </p>
                   <p className="text-base text-foreground font-semibold pt-2">
