@@ -109,13 +109,13 @@ const Footer = () => {
             </div>
             <div className="space-y-2 pt-4">
               <a
-                href="#"
+                href="/politica-de-privacidade"
                 className="block text-sm text-background/80 hover:text-primary transition-colors"
               >
                 Política de Privacidade
               </a>
               <a
-                href="#"
+                href="/termos-de-uso"
                 className="block text-sm text-background/80 hover:text-primary transition-colors"
               >
                 Termos de Uso
