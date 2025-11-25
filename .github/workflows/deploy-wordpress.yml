@@ -57,7 +57,7 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./wordpress-plugin/
-          server-dir: /public_html/wp-content/plugins/bioactive-hair-plugin/
+          server-dir: /domains/bioactivehair.com/public_html/wp-content/plugins/bioactive-hair-plugin/
           protocol: ftp
           port: 21
           security: loose
