@@ -50,7 +50,33 @@ add_action( 'wp_enqueue_scripts', 'bioactive_hair_enqueue_assets' );
 function bioactive_hair_display_content_shortcode() {
     ob_start();
     ?>
-    <div id="root"></div>
+    <style>
+        /* Remove laterais brancas e faz o app ocupar toda a largura */
+        .bioactive-hair-container {
+            width: 100vw;
+            position: relative;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+            max-width: 100vw;
+        }
+        
+        /* Remove padding do Elementor/WordPress */
+        .elementor-widget-container {
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+        
+        /* Garante que o root ocupe toda a largura */
+        #root {
+            width: 100%;
+            min-height: 100vh;
+        }
+    </style>
+    <div class="bioactive-hair-container">
+        <div id="root"></div>
+    </div>
     <?php
     return ob_get_clean();
 }
