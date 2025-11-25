@@ -11,8 +11,8 @@ const PricingSection = () => {
     {
       name: "Básico",
       description: "com 60 cápsulas.",
-      installments: "12x DE R$19,70",
-      total: "R$197,00",
+      installments: "12x DE R$12,10",
+      total: "R$117,00",
       discount: null,
       isRecommended: false,
       image: product1Bottle,
@@ -22,8 +22,8 @@ const PricingSection = () => {
       name: "Recomendado",
       description: "com 180 cápsulas.",
       oldPrice: "R$591,00",
-      installments: "12x DE R$29,70",
-      total: "R$297,00",
+      installments: "12x DE R$25,55",
+      total: "R$247,00",
       discount: "49% OFF",
       isRecommended: true,
       image: product3Bottles,
@@ -33,8 +33,8 @@ const PricingSection = () => {
       name: "Avançado",
       description: "com 300 cápsulas.",
       oldPrice: "R$993,00",
-      installments: "12x DE R$39,70",
-      total: "R$397,00",
+      installments: "12x DE R$35,89",
+      total: "R$347,00",
       discount: "60% OFF",
       isRecommended: false,
       image: product5Bottles,
@@ -89,30 +89,28 @@ const PricingSection = () => {
 
                 {/* Plan Name */}
                 <div className="text-center">
-                  <h3 className="text-2xl font-bold text-foreground mb-2">
+                  <h3 className="text-2xl font-bold text-foreground mb-0">
                     {plan.name}
                   </h3>
-                  <p className="text-muted-foreground">{plan.description}</p>
+                  <p className="text-muted-foreground mt-0">{plan.description}</p>
                 </div>
 
-                {/* Old Price */}
-                {plan.oldPrice && (
-                  <div className="text-center">
-                    <p className="text-xl text-muted-foreground line-through">
+                {/* Pricing */}
+                <div className="text-center space-y-1">
+                  {plan.oldPrice && (
+                    <p className="text-sm text-muted-foreground line-through">
                       DE {plan.oldPrice}
                     </p>
+                  )}
+                  <div className="flex items-baseline justify-center gap-2">
+                    <span className="text-sm text-muted-foreground uppercase font-semibold">
+                      POR APENAS 12x DE
+                    </span>
                   </div>
-                )}
-
-                {/* Pricing */}
-                <div className="text-center space-y-2">
-                  <p className="text-sm text-muted-foreground uppercase font-semibold">
-                    Por apenas
+                  <p className="text-6xl font-black text-primary leading-none" style={{ fontWeight: 900 }}>
+                    {plan.installments.split(' ').pop()}
                   </p>
-                  <p className="text-3xl font-bold text-primary">
-                    {plan.installments}
-                  </p>
-                  <p className="text-lg text-foreground font-semibold">
+                  <p className="text-base text-foreground font-semibold pt-2">
                     OU {plan.total} À VISTA
                   </p>
                 </div>

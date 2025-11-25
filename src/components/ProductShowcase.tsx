@@ -67,9 +67,9 @@ const ProductShowcase = () => {
             <Button
               onClick={scrollToPricing}
               size="lg"
-              className="bg-primary text-primary-foreground hover:bg-primary/90 w-full md:w-auto"
+              className="bg-primary text-primary-foreground hover:bg-primary/90 text-lg px-6 py-6 h-auto animate-pulse-glow rounded-full w-full md:w-auto"
             >
-              COMPRE AGORA
+              Quero <span className="font-bold">parar de sofrer</span> com meu cabelo!
             </Button>
           </div>
         </div>

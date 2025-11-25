@@ -13,17 +13,20 @@ const HeroSection = () => {
   return (
     <section
       id="inicio"
-      className="pt-32 pb-20 px-4 bg-gradient-to-br from-[#fce7f3] via-background to-accent"
+      className="pt-20 pb-20 px-4 bg-gradient-to-br from-[#fce7f3] via-background to-accent"
     >
       <div className="container mx-auto">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Text Content */}
           <div className="space-y-8 animate-fade-in">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
-              Está tendo dificuldade para resolver seu problema de queda capilar?
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-foreground leading-tight">
+              ESTÁ TENDO<br />
+              DIFICULDADE PARA<br />
+              <span className="text-primary">RESOLVER SEU PROBLEMA</span><br />
+              DE QUEDA CAPILAR?
             </h1>
-            <h3 className="text-xl md:text-2xl text-muted-foreground font-semibold">
-              Adquira agora o seu e veja você mesma !!
+            <h3 className="text-xl md:text-2xl text-primary font-semibold">
+              ADQUIRA AGORA O SEU E VEJA VOCÊ MESMA!!!
             </h3>
 
             {/* Benefits List */}
@@ -52,9 +55,9 @@ const HeroSection = () => {
             <Button
               onClick={scrollToPricing}
               size="lg"
-              className="bg-primary text-primary-foreground hover:bg-primary/90 text-lg px-8 py-6 h-auto animate-pulse-glow"
+              className="bg-primary text-primary-foreground hover:bg-primary/90 text-lg px-6 py-6 h-auto animate-pulse-glow rounded-full"
             >
-              COMPRE AGORA
+              Quero <span className="font-bold">parar de sofrer</span> com meu cabelo!
             </Button>
           </div>
 

@@ -33,20 +33,23 @@ const ProblemSolution = () => {
       <div className="container mx-auto">
         {/* Header */}
         <div className="text-center mb-16 space-y-6">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
-            Cansada de sofrer com cabelos que quebram, caem e não crescem?
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-foreground">
+            <span className="text-primary">CANSADA DE SOFRER</span> COM CABELOS QUE QUEBRAM, CAEM E NÃO CRESCEM?
           </h2>
           <div className="h-1 w-24 bg-primary mx-auto rounded-full"></div>
           <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto">
-            Com Bio Active Hair, você além de solucionar seus problemas capilares, também irá proporcionar para sua pele elementos para eliminar linhas de expressão e fortalecimento de suas unhas.
+            Com <span className="font-bold">Bio Active Hair</span>, você além de solucionar seus problemas capilares, também irá proporcionar para sua pele elementos para eliminar <span className="font-bold">linhas de expressão</span> e <span className="font-bold">fortalecimento de suas unhas</span>.
+          </p>
+          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto pt-2">
+            A fórmula <span className="font-bold">Bio Active Hair</span> foi estrategicamente pensada em cada elemento afim de proporcionar ao seu organismo os <span className="font-bold">ativos que ele precisa</span> para seu cabelo crescer:
           </p>
         </div>
 
         {/* Subtitle */}
-        <div className="text-center mb-12">
-          <h3 className="text-xl md:text-2xl font-semibold text-foreground max-w-3xl mx-auto">
-            A fórmula Bio Active Hair foi estrategicamente pensada em cada elemento afim de proporcionar ao seu organismo os ativos que ele precisa para seu cabelo crescer:
-          </h3>
+        <div className="text-center mb-12 hidden">
+          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
+            A fórmula <span className="font-bold">Bio Active Hair</span> foi estrategicamente pensada em cada elemento afim de proporcionar ao seu organismo os <span className="font-bold">ativos que ele precisa</span> para seu cabelo crescer:
+          </p>
         </div>
 
         {/* Benefits Cards */}
@@ -73,15 +76,21 @@ const ProblemSolution = () => {
           })}
         </div>
 
+        {/* Subtitle */}
+        <div className="text-center mb-8">
+          <h3 className="text-2xl md:text-3xl font-black text-foreground">
+            ENTENDA COMO <span className="text-primary">BIO ACTIVE HAIR</span> IRÁ SOLUCIONAR SEU PROBLEMA CAPILAR
+          </h3>
+        </div>
+
         {/* CTA */}
         <div className="text-center">
           <Button
             onClick={scrollToComposition}
             size="lg"
-            variant="outline"
-            className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+            className="bg-primary text-primary-foreground hover:bg-primary/90 text-lg px-6 py-6 h-auto animate-pulse-glow rounded-full"
           >
-            Entenda como Bio Active Hair irá solucionar seu problema capilar
+            Quero conhecer esse Bio Active!
           </Button>
         </div>
       </div>

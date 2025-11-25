@@ -39,7 +39,9 @@ const Footer = () => {
               <div className="flex items-center space-x-2 text-sm">
                 <MessageCircle className="h-4 w-4 text-primary" />
                 <a
-                  href="#"
+                  href="https://wa.me/5546920016522?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20o%20Bio%20Active%20Hair."
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-background/80 hover:text-primary transition-colors"
                 >
                   WhatsApp
@@ -80,19 +82,25 @@ const Footer = () => {
             </h4>
             <div className="flex space-x-4">
               <a
-                href="#"
+                href="https://www.facebook.com/bio.activehair"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center hover:bg-primary transition-colors"
               >
                 <Facebook className="h-5 w-5 text-background" />
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/bio.activehair/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center hover:bg-primary transition-colors"
               >
                 <Instagram className="h-5 w-5 text-background" />
               </a>
               <a
-                href="#"
+                href="https://wa.me/5546920016522?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20o%20Bio%20Active%20Hair."
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center hover:bg-primary transition-colors"
               >
                 <MessageCircle className="h-5 w-5 text-background" />
@@ -131,7 +139,7 @@ const Footer = () => {
         {/* Copyright */}
         <div className="border-t border-background/20 pt-6 mt-6 text-center">
           <p className="text-sm text-background/80">
-            2025 © Bio Active Hair. Todos os direitos reservados.
+            2021 © Bio Active Hair. Todos os direitos reservados.
           </p>
         </div>
       </div>
