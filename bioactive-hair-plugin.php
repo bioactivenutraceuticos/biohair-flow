@@ -47,7 +47,12 @@ function bioactive_hair_enqueue_assets() {
 }
 add_action( 'wp_enqueue_scripts', 'bioactive_hair_enqueue_assets' );
 
-function bioactive_hair_display_content_shortcode() {
+function bioactive_hair_display_content_shortcode( $atts ) {
+    // Permite passar a página como parâmetro: [bioactive_hair_app page="contato"]
+    $atts = shortcode_atts( array(
+        'page' => 'home', // página padrão
+    ), $atts );
+    
     ob_start();
     ?>
     <style>
@@ -75,8 +80,12 @@ function bioactive_hair_display_content_shortcode() {
         }
     </style>
     <div class="bioactive-hair-container">
-        <div id="root"></div>
+        <div id="root" data-page="<?php echo esc_attr( $atts['page'] ); ?>"></div>
     </div>
+    <script>
+        // Passa a página para o React via data attribute
+        window.BIOACTIVE_INITIAL_PAGE = '<?php echo esc_js( $atts['page'] ); ?>';
+    </script>
     <?php
     return ob_get_clean();
 }
