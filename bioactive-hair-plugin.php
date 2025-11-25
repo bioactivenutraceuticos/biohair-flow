@@ -16,62 +16,29 @@ define( 'BIOACTIVE_HAIR_PLUGIN_PATH', plugin_dir_path( __FILE__ ) );
 define( 'BIOACTIVE_HAIR_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 
 function bioactive_hair_enqueue_assets() {
-    // Lê o manifest do Vite para pegar os nomes corretos dos arquivos
-    $manifest_path = BIOACTIVE_HAIR_PLUGIN_PATH . '.vite/manifest.json';
+    $version = '1.0.0'; // Atualize este número quando fizer deploy de uma nova versão
     
-    if ( file_exists( $manifest_path ) ) {
-        $manifest = json_decode( file_get_contents( $manifest_path ), true );
-        
-        // Enfileira o arquivo principal JS
-        if ( isset( $manifest['index.html']['file'] ) ) {
-            wp_enqueue_script(
-                'bioactive-hair-main',
-                BIOACTIVE_HAIR_PLUGIN_URL . $manifest['index.html']['file'],
-                array(),
-                null,
-                true
-            );
-        }
-        
-        // Enfileira CSS se existir
-        if ( isset( $manifest['index.html']['css'] ) ) {
-            foreach ( $manifest['index.html']['css'] as $css_file ) {
-                wp_enqueue_style(
-                    'bioactive-hair-' . sanitize_title( $css_file ),
-                    BIOACTIVE_HAIR_PLUGIN_URL . $css_file,
-                    array(),
-                    null
-                );
-            }
-        }
-    } else {
-        // Fallback: carrega todos os arquivos CSS e JS
-        $css_files = glob( BIOACTIVE_HAIR_PLUGIN_PATH . 'assets/*.css' );
-        if ( $css_files ) {
-            foreach ( $css_files as $css_file ) {
-                $css_name = basename( $css_file );
-                wp_enqueue_style(
-                    'bioactive-hair-' . sanitize_title( $css_name ),
-                    BIOACTIVE_HAIR_PLUGIN_URL . 'assets/' . $css_name,
-                    array(),
-                    filemtime( $css_file )
-                );
-            }
-        }
-
-        $js_files = glob( BIOACTIVE_HAIR_PLUGIN_PATH . 'assets/*.js' );
-        if ( $js_files ) {
-            foreach ( $js_files as $js_file ) {
-                $js_name = basename( $js_file );
-                wp_enqueue_script(
-                    'bioactive-hair-' . sanitize_title( $js_name ),
-                    BIOACTIVE_HAIR_PLUGIN_URL . 'assets/' . $js_name,
-                    array(),
-                    filemtime( $js_file ),
-                    true
-                );
-            }
-        }
+    // Carrega CSS principal
+    $css_file = BIOACTIVE_HAIR_PLUGIN_PATH . 'assets/main.css';
+    if ( file_exists( $css_file ) ) {
+        wp_enqueue_style(
+            'bioactive-hair-main',
+            BIOACTIVE_HAIR_PLUGIN_URL . 'assets/main.css',
+            array(),
+            $version
+        );
+    }
+    
+    // Carrega JS principal
+    $js_file = BIOACTIVE_HAIR_PLUGIN_PATH . 'assets/main.js';
+    if ( file_exists( $js_file ) ) {
+        wp_enqueue_script(
+            'bioactive-hair-main',
+            BIOACTIVE_HAIR_PLUGIN_URL . 'assets/main.js',
+            array(),
+            $version,
+            true
+        );
     }
 }
 add_action( 'wp_enqueue_scripts', 'bioactive_hair_enqueue_assets' );
