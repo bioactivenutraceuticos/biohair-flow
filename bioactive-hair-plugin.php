@@ -66,6 +66,18 @@ function bioactive_hair_enqueue_assets() {
                 max-width: 100% !important;
                 height: auto !important;
             }
+            
+            /* FAQ - Fundo cinza sem bordas */
+            #root [data-state] {
+                background-color: hsl(0 0% 96%) !important;
+                border: none !important;
+                border-radius: 0.5rem !important;
+            }
+            
+            /* Remove bordas do accordion */
+            #root [data-radix-collection-item] {
+                border: none !important;
+            }
         ";
         wp_add_inline_style( 'bioactive-hair-main', $custom_css );
     }
