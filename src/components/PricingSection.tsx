@@ -53,13 +53,13 @@ const PricingSection = () => {
         </div>
 
         {/* Pricing Cards */}
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto items-start">
           {plans.map((plan, index) => (
             <Card
               key={index}
               className={`relative hover:scale-105 transition-all duration-300 ${
                 plan.isRecommended
-                  ? "scale-105 bg-muted border-2 border-primary"
+                  ? "bg-muted border-2 border-primary"
                   : ""
               }`}
             >
