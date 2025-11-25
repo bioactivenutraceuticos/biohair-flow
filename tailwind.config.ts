@@ -110,10 +110,10 @@ export default {
         },
         "pulse-glow": {
           "0%, 100%": {
-            boxShadow: "0 0 20px rgba(76, 175, 80, 0.3)",
+            opacity: "1",
           },
           "50%": {
-            boxShadow: "0 0 30px rgba(76, 175, 80, 0.6)",
+            opacity: "0.95",
           },
         },
       },
