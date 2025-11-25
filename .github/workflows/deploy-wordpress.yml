@@ -94,16 +94,18 @@ jobs:
           add_shortcode( 'bioactive_hair_app', 'bioactive_hair_display_content_shortcode' );
           EOF
 
-      - name: Deploy via SFTP (Hostinger)
-        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+      - name: Deploy via FTP (Hostinger)
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local_path: './wordpress-plugin/*'
-          remote_path: '/public_html/wp-content/plugins/bioactive-hair-plugin/'
-          sftp_only: true
-          delete_remote_files: true
+          local-dir: ./wordpress-plugin/
+          server-dir: /public_html/wp-content/plugins/bioactive-hair-plugin/
+          protocol: ftp
+          port: 21
+          security: loose
+          dangerous-clean-slate: true
 
       - name: Notificar sucesso
         if: success()
