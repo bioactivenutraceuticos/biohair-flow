@@ -22,3 +22,14 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# macOS
+._*
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# WordPress (não usado mais)
+bioactive-hair-plugin.php
+setup-wp-plugin.php
+deploy-wp.sh

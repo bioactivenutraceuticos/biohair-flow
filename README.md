@@ -1,73 +1,126 @@
-# Welcome to your Lovable project
+# Bio Active Hair - Landing Page
 
-## Project info
+Landing page moderna e responsiva para o produto Bio Active Hair, desenvolvida com React, TypeScript, Tailwind CSS e shadcn/ui.
 
-**URL**: https://lovable.dev/projects/4a779160-2c37-4cbc-b3bc-131fc8e13764
+## 🚀 Tecnologias
 
-## How can I edit this code?
+- **React 18** - Biblioteca JavaScript para interfaces
+- **TypeScript** - Tipagem estática
+- **Vite** - Build tool rápido
+- **Tailwind CSS** - Framework CSS utility-first
+- **shadcn/ui** - Componentes UI reutilizáveis
+- **Lucide React** - Ícones modernos
 
-There are several ways of editing your application.
+## 📦 Instalação
 
-**Use Lovable**
+```bash
+# Instalar dependências
+npm install
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/4a779160-2c37-4cbc-b3bc-131fc8e13764) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Rodar em desenvolvimento
 npm run dev
+
+# Build para produção
+npm run build
+
+# Preview do build
+npm run preview
 ```
 
-**Edit a file directly in GitHub**
+## 🌐 Deploy
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+O site é automaticamente deployado na Hostinger via GitHub Actions quando você faz push para a branch `main`.
 
-**Use GitHub Codespaces**
+### Configuração do Deploy
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+Veja instruções completas em [DEPLOY-HOSTINGER.md](./DEPLOY-HOSTINGER.md)
 
-## What technologies are used for this project?
+**Secrets necessários no GitHub:**
+- `FTP_SERVER` - Servidor FTP da Hostinger
+- `FTP_USERNAME` - Usuário FTP
+- `FTP_PASSWORD` - Senha FTP
 
-This project is built with:
+## 📁 Estrutura do Projeto
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+```
+biohair-flow/
+├── src/
+│   ├── components/          # Componentes React
+│   │   ├── ui/             # Componentes shadcn/ui
+│   │   ├── HeroSection.tsx
+│   │   ├── ProblemSolution.tsx
+│   │   ├── ProductShowcase.tsx
+│   │   ├── CompositionSection.tsx
+│   │   ├── PricingSection.tsx
+│   │   ├── TestimonialsSection.tsx
+│   │   ├── FAQSection.tsx
+│   │   └── Footer.tsx
+│   ├── pages/
+│   │   └── Index.tsx        # Página principal
+│   ├── assets/              # Imagens e recursos
+│   ├── lib/                 # Utilitários
+│   ├── index.css            # Estilos globais
+│   └── main.tsx             # Entry point
+├── public/                  # Arquivos públicos
+├── .github/workflows/       # GitHub Actions
+└── dist/                    # Build de produção
+```
 
-## How can I deploy this project?
+## 🎨 Seções da Landing Page
 
-Simply open [Lovable](https://lovable.dev/projects/4a779160-2c37-4cbc-b3bc-131fc8e13764) and click on Share -> Publish.
+1. **Hero** - Apresentação do produto com CTA
+2. **Problema/Solução** - Benefícios do produto
+3. **Showcase** - Destaque do produto
+4. **Composição** - Ingredientes e certificações
+5. **Antes/Depois** - Resultados visuais
+6. **Preços** - Planos e ofertas
+7. **Depoimentos** - Avaliações de clientes
+8. **FAQ** - Perguntas frequentes
+9. **Garantia** - Política de devolução
+10. **Footer** - Informações de contato
 
-## Can I connect a custom domain to my Lovable project?
+## 🎯 Features
 
-Yes, you can!
+- ✅ Design responsivo (mobile-first)
+- ✅ Animações suaves
+- ✅ Carrossel de depoimentos
+- ✅ Accordion para FAQ
+- ✅ Cards de preços interativos
+- ✅ Navegação suave entre seções
+- ✅ Otimizado para SEO
+- ✅ Performance otimizada
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## 🔧 Desenvolvimento
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+### Adicionar novo componente
+
+```bash
+# Componente shadcn/ui
+npx shadcn-ui@latest add [component-name]
+
+# Componente customizado
+# Criar em src/components/NomeDoComponente.tsx
+```
+
+### Modificar cores e tema
+
+Edite as variáveis CSS em `src/index.css`:
+
+```css
+:root {
+  --primary: 326 100% 40%;      /* Rosa principal */
+  --secondary: 326 80% 60%;     /* Rosa secundário */
+  --accent: 326 100% 95%;       /* Rosa claro */
+  /* ... */
+}
+```
+
+## 📝 Licença
+
+Projeto proprietário - Bio Active Hair
+
+## 👥 Contato
+
+- **Email**: contato@bioactivehair.com
+- **WhatsApp**: (37) 3351-5181
+- **Site**: https://bioactivehair.com
