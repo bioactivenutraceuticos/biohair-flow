@@ -38,7 +38,7 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./dist/
-          server-dir: /
+          server-dir: /public_html/
           protocol: ftp
           port: 21
           log-level: verbose
@@ -47,6 +47,16 @@ jobs:
             **/.git*
             **/.git*/**
             **/node_modules/**
+
+      - name: Verificar arquivos enviados
+        run: |
+          echo "📋 Verificando se os arquivos foram enviados..."
+          apt-get update -qq && apt-get install -y -qq lftp > /dev/null 2>&1
+          lftp -u ${{ secrets.FTP_USERNAME }},${{ secrets.FTP_PASSWORD }} ${{ secrets.FTP_SERVER }} <<EOF
+          cd /public_html/
+          ls -la
+          bye
+          EOF
 
       - name: Notificar sucesso
         if: success()
