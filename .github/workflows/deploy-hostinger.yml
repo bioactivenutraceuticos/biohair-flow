@@ -31,6 +31,17 @@ jobs:
           echo "📦 Arquivos gerados no build:"
           ls -la dist/
 
+      - name: Verificar estrutura do servidor FTP
+        continue-on-error: true
+        run: |
+          echo "🔍 Verificando estrutura do servidor..."
+          sudo apt-get update -qq && sudo apt-get install -y -qq lftp > /dev/null 2>&1
+          lftp -u ${{ secrets.FTP_USERNAME }},${{ secrets.FTP_PASSWORD }} ${{ secrets.FTP_SERVER }} <<EOF
+          pwd
+          ls -la
+          bye
+          EOF
+
       - name: Deploy via FTP para Hostinger
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
@@ -38,7 +49,7 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./dist/
-          server-dir: /public_html/
+          server-dir: ./domains/bioactivehair.com/public_html/
           protocol: ftp
           port: 21
           log-level: verbose
@@ -49,11 +60,14 @@ jobs:
             **/node_modules/**
 
       - name: Verificar arquivos enviados
+        continue-on-error: true
         run: |
-          echo "📋 Verificando se os arquivos foram enviados..."
-          apt-get update -qq && apt-get install -y -qq lftp > /dev/null 2>&1
+          echo "📋 Verificando arquivos no servidor..."
           lftp -u ${{ secrets.FTP_USERNAME }},${{ secrets.FTP_PASSWORD }} ${{ secrets.FTP_SERVER }} <<EOF
-          cd /public_html/
+          pwd
+          ls -la
+          cd domains/bioactivehair.com/public_html
+          pwd
           ls -la
           bye
           EOF
