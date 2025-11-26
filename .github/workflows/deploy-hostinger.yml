@@ -42,7 +42,12 @@ jobs:
           protocol: ftp
           port: 21
           security: loose
-          dangerous-clean-slate: true
+          dangerous-clean-slate: false
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
+            default.php
 
       - name: Notificar sucesso
         if: success()
