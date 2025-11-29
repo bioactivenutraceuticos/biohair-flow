@@ -9,6 +9,7 @@ import product5Bottles from "@/assets/product-5-bottles.png";
 const PricingSection = () => {
   const plans = [
     {
+      id: "kit1",
       name: "Básico",
       description: "com 60 cápsulas.",
       installments: "12x DE R$12,10",
@@ -19,6 +20,7 @@ const PricingSection = () => {
       checkoutUrl: "https://ev.braip.com/checkout/pla9xzqy/chene9ov?currency=BRL",
     },
     {
+      id: "kit3",
       name: "Recomendado",
       description: "com 180 cápsulas.",
       oldPrice: "R$591,00",
@@ -30,6 +32,7 @@ const PricingSection = () => {
       checkoutUrl: "https://ev.braip.com/checkout/plakrvxl/chene9ov?currency=BRL",
     },
     {
+      id: "kit5",
       name: "Avançado",
       description: "com 300 cápsulas.",
       oldPrice: "R$993,00",
@@ -57,6 +60,7 @@ const PricingSection = () => {
           {plans.map((plan, index) => (
             <Card
               key={index}
+              id={plan.id}
               className={`relative hover:scale-105 transition-all duration-300 ${
                 plan.isRecommended
                   ? "bg-muted border-2 border-primary"
