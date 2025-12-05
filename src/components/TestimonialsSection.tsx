@@ -37,7 +37,7 @@ const TestimonialsSection = () => {
   const allTestimonials = [...testimonials, ...testimonials];
 
   return (
-    <section id="depoimentos" className="py-20 px-4 bg-background">
+    <section id="depoimentos" className="py-20 px-4 bg-muted/30">
       <div className="container mx-auto">
         {/* Header */}
         <div className="text-center mb-16">

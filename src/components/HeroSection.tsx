@@ -5,19 +5,19 @@ import anvisaSeal from "@/assets/Selo AVNISA - 2.png";
 
 const HeroSection = () => {
   const scrollToPricing = () => {
-    const element = document.getElementById("precos");
+    const element = document.getElementById("kit3");
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      element.scrollIntoView({ behavior: "smooth", block: "center" });
     }
   };
 
   return (
     <section
       id="inicio"
-      className="pt-20 pb-20 px-4 bg-gradient-to-br from-[#fce7f3] via-background to-accent"
+      className="py-20 px-4 bg-gradient-to-br from-[#fce7f3] via-background to-accent"
     >
       <div className="container mx-auto">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid md:grid-cols-[2fr_1fr] gap-12 items-center">
           {/* Text Content */}
           <div className="space-y-6 animate-fade-in">
             <h1 className="text-3xl md:text-4xl lg:text-5xl text-foreground leading-tight font-bold uppercase">
@@ -27,7 +27,7 @@ const HeroSection = () => {
             </h1>
             
             <p className="text-lg md:text-xl text-muted-foreground font-medium">
-              (Baseado em 15 estudos internacionais + garantia de 120 Dias)
+              (Baseado em 15 estudos internacionais + garantia de 60 Dias)
             </p>
 
             <h2 className="text-xl md:text-2xl text-foreground font-semibold leading-relaxed">
@@ -40,7 +40,7 @@ const HeroSection = () => {
                 "Reduz queda em até 87% em 30 dias (comprovado cientificamente)",
                 "18 ingredientes ativos com estudos publicados internacionalmente",
                 "Certificado pela ANVISA - 100% seguro e natural",
-                "Garantia blindada de 120 dias ou 100% do seu dinheiro de volta",
+                "Garantia blindada de 60 dias ou 100% do seu dinheiro de volta",
                 "Frete grátis para todo o Brasil",
               ].map((benefit, index) => (
                 <div
@@ -48,8 +48,8 @@ const HeroSection = () => {
                   className="flex items-start space-x-3 animate-slide-in"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
-                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-secondary flex items-center justify-center mt-0.5">
-                    <Check className="h-4 w-4 text-secondary-foreground" />
+                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-primary flex items-center justify-center mt-0.5">
+                    <Check className="h-4 w-4 text-primary-foreground" />
                   </div>
                   <span className="text-base md:text-lg text-foreground font-medium">
                     {benefit}

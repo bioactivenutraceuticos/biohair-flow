@@ -65,7 +65,7 @@ const PricingSection = () => {
             >
               {/* Discount Badge */}
               {plan.discount && (
-                <Badge className="absolute -top-3 -right-3 bg-destructive text-destructive-foreground px-4 py-2 text-lg font-bold z-10">
+                <Badge className="absolute -top-3 -right-3 bg-secondary text-secondary-foreground px-4 py-2 text-lg font-bold z-10">
                   {plan.discount}
                 </Badge>
               )}
@@ -124,7 +124,9 @@ const PricingSection = () => {
                     "Entrega Garantida",
                   ].map((feature, i) => (
                     <div key={i} className="flex items-center space-x-2">
-                      <Check className="h-5 w-5 text-secondary flex-shrink-0" />
+                      <div className="flex-shrink-0 w-6 h-6 rounded-full bg-primary flex items-center justify-center">
+                        <Check className="h-4 w-4 text-primary-foreground" />
+                      </div>
                       <span className="text-sm text-foreground">{feature}</span>
                     </div>
                   ))}

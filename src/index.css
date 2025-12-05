@@ -22,7 +22,7 @@ All colors MUST be HSL.
     --primary-foreground: 0 0% 100%;
 
     /* Bio Active Secondary Pink */
-    --secondary: 326 80% 60%;
+    --secondary: 340 82% 67%;
     --secondary-foreground: 0 0% 100%;
 
     /* Subtle backgrounds */
@@ -45,7 +45,7 @@ All colors MUST be HSL.
 
     /* Custom tokens for Bio Active */
     --bio-pink-primary: 326 100% 40%;
-    --bio-pink-secondary: 326 80% 60%;
+    --bio-pink-secondary: 326 70% 75%;
     --bio-pink-light: 326 100% 95%;
     --bio-discount: 0 73% 68%;
     --bio-dark: 0 0% 20%;
@@ -65,7 +65,7 @@ All colors MUST be HSL.
     --primary: 326 100% 40%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 326 80% 60%;
+    --secondary: 326 70% 75%;
     --secondary-foreground: 0 0% 100%;
 
     --muted: 0 0% 15%;

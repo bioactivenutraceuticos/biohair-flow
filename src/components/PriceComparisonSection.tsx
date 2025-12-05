@@ -1,9 +1,10 @@
 import { DollarSign, Clock, AlertTriangle, Target, MapPin, Home, Sparkles } from "lucide-react";
 
-const PriceAnchoringSection = () => {
+const PriceComparisonSection = () => {
   const options = [
     {
       title: "TRANSPLANTE CAPILAR",
+      icon: "💸",
       items: [
         { icon: DollarSign, label: "Investimento", value: "R$ 15.000 - R$ 35.000" },
         { icon: Clock, label: "Tempo", value: "1 dia (cirurgia) + 6 meses recuperação" },
@@ -15,6 +16,7 @@ const PriceAnchoringSection = () => {
     },
     {
       title: "TRATAMENTO EM CLÍNICA",
+      icon: "🏥",
       items: [
         { icon: DollarSign, label: "Investimento", value: "R$ 400/mês x 12 meses = R$ 4.800" },
         { icon: Clock, label: "Tempo", value: "2-3 horas/semana por 1 ano" },
@@ -26,6 +28,7 @@ const PriceAnchoringSection = () => {
     },
     {
       title: "PRODUTOS DE FARMÁCIA",
+      icon: "💊",
       items: [
         { icon: DollarSign, label: "Investimento", value: "R$ 180/mês x 6 meses = R$ 1.080" },
         { icon: Clock, label: "Tempo", value: "Uso diário por 6+ meses" },
@@ -37,24 +40,26 @@ const PriceAnchoringSection = () => {
     },
     {
       title: "BIO ACTIVE HAIR",
+      icon: "✨",
       items: [
-        { icon: DollarSign, label: "Investimento", value: "R$ 247 (tratamento completo 3 meses)", highlight: true },
+        { icon: DollarSign, label: "Investimento", value: "R$ 97 (tratamento completo 3 meses)", highlight: true },
         { icon: Clock, label: "Tempo", value: "30 segundos/dia por 3 meses" },
         { icon: Home, label: "Uso", value: "Em casa, quando quiser" },
         { icon: Target, label: "Taxa de sucesso", value: "87% (baseado em estudos)" },
-        { icon: AlertTriangle, label: "Riscos", value: "ZERO - 60 dias de garantia" },
+        { icon: AlertTriangle, label: "Riscos", value: "ZERO - 120 dias de garantia" },
       ],
       highlight: true,
-      footer: "= R$ 82 por mês para recuperar seus cabelos",
+      footer: "= R$ 32 por mês para recuperar seus cabelos",
     },
   ];
 
   return (
-    <section className="py-20 px-4 bg-background">
-      <div className="container mx-auto max-w-6xl">
-        <div className="text-center mb-16">
+    <section className="py-20 px-4 bg-muted/30">
+      <div className="container mx-auto max-w-7xl">
+        <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 uppercase">
-            Compare os Investimentos:<br />você vai se surpreender
+            Compare os Investimentos:
+            você vai se surpreender
           </h2>
         </div>
 
@@ -69,15 +74,16 @@ const PriceAnchoringSection = () => {
               }`}
             >
               {option.highlight && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-secondary text-secondary-foreground px-6 py-2 rounded-full font-bold text-xs uppercase shadow-lg whitespace-nowrap">
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-secondary text-secondary-foreground px-6 py-2 rounded-full font-bold text-sm uppercase shadow-lg">
                   Melhor Custo-Benefício
                 </div>
               )}
 
               <div className="text-center mb-6">
+                <div className="text-4xl mb-3">{option.icon}</div>
                 <h3
                   className={`text-xl font-bold uppercase ${
-                    option.highlight ? "text-white" : "text-foreground"
+                    option.highlight ? "text-primary-foreground" : "text-foreground"
                   }`}
                 >
                   {option.title}
@@ -91,23 +97,23 @@ const PriceAnchoringSection = () => {
                     <div key={itemIndex} className="flex items-start gap-3">
                       <Icon
                         className={`h-5 w-5 flex-shrink-0 mt-0.5 ${
-                          option.highlight ? "text-white" : "text-primary"
+                          option.highlight ? "text-primary-foreground" : "text-primary"
                         }`}
                       />
                       <div className="flex-1">
                         <div
-                          className={`text-xs font-bold mb-1 uppercase ${
-                            option.highlight ? "text-white" : "text-muted-foreground"
+                          className={`text-xs font-semibold mb-1 ${
+                            option.highlight ? "text-primary-foreground/80" : "text-muted-foreground"
                           }`}
                         >
                           {item.label}
                         </div>
                         <div
-                          className={`text-sm font-medium leading-tight ${
+                          className={`text-sm font-medium ${
                             option.highlight
                               ? item.highlight
-                                ? "text-white font-bold text-base"
-                                : "text-white"
+                                ? "text-secondary font-bold text-base"
+                                : "text-primary-foreground"
                               : "text-foreground"
                           }`}
                         >
@@ -120,8 +126,8 @@ const PriceAnchoringSection = () => {
               </div>
 
               {option.footer && (
-                <div className="mt-6 pt-6 border-t-2 border-white/30">
-                  <p className="text-center text-base font-bold text-white">{option.footer}</p>
+                <div className="mt-6 pt-6 border-t-2 border-secondary">
+                  <p className="text-center text-lg font-bold text-secondary">{option.footer}</p>
                 </div>
               )}
             </div>
@@ -138,4 +144,4 @@ const PriceAnchoringSection = () => {
   );
 };
 
-export default PriceAnchoringSection;
+export default PriceComparisonSection;

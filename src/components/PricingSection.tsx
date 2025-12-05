@@ -51,6 +51,26 @@ const PricingSection = () => {
   return (
     <section id="precos" className="py-20 px-4 bg-background">
       <div className="container mx-auto">
+        {/* Urgency Section */}
+        <div className="text-center mb-16 space-y-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl text-foreground">
+            <span className="text-primary font-black">ATENÇÃO:</span> <span className="font-bold">Esta Oferta Tem Prazo Para Acabar</span>
+          </h2>
+          <div className="h-1 w-24 bg-primary mx-auto rounded-full"></div>
+          
+          <div className="max-w-4xl mx-auto space-y-4">
+            <div className="bg-primary text-primary-foreground rounded-xl p-6">
+              <p className="text-xl md:text-2xl font-black">
+                ÚLTIMAS 23 UNIDADES COM 60% DE DESCONTO
+              </p>
+            </div>
+            
+            <p className="text-lg md:text-xl text-muted-foreground">
+              Devido ao alto custo dos 18 nutrientes importados e nossa produção limitada, se você está lendo isso, ainda dá tempo. Mas precisa decidir <span className="text-primary font-bold">AGORA</span>.
+            </p>
+          </div>
+        </div>
+
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 uppercase">
@@ -72,7 +92,7 @@ const PricingSection = () => {
             >
               {/* Discount Badge */}
               {plan.discount && (
-                <Badge className="absolute -top-3 -right-3 bg-destructive text-destructive-foreground px-4 py-2 text-lg font-bold z-10">
+                <Badge className="absolute -top-3 -right-3 bg-secondary text-secondary-foreground px-4 py-2 text-lg font-bold z-10">
                   {plan.discount}
                 </Badge>
               )}
@@ -131,7 +151,9 @@ const PricingSection = () => {
                     "Entrega Garantida",
                   ].map((feature, i) => (
                     <div key={i} className="flex items-center space-x-2">
-                      <Check className="h-5 w-5 text-secondary flex-shrink-0" />
+                      <div className="flex-shrink-0 w-6 h-6 rounded-full bg-primary flex items-center justify-center">
+                        <Check className="h-4 w-4 text-primary-foreground" />
+                      </div>
                       <span className="text-sm text-foreground">{feature}</span>
                     </div>
                   ))}
@@ -143,7 +165,7 @@ const PricingSection = () => {
                   className={`w-full h-auto py-4 text-lg font-bold ${
                     plan.isRecommended
                       ? "bg-primary text-primary-foreground hover:bg-primary/90 animate-pulse-glow"
-                      : "bg-accent text-primary hover:bg-accent/80"
+                      : "bg-[hsl(326,85%,52%)] text-primary-foreground hover:bg-[hsl(326,85%,48%)]"
                   }`}
                 >
                   <a href={plan.checkoutUrl} target="_blank" rel="noopener noreferrer" className="flex flex-col gap-1">

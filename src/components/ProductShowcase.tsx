@@ -4,9 +4,9 @@ import { Button } from "@/components/ui/button";
 
 const ProductShowcase = () => {
   const scrollToPricing = () => {
-    const element = document.getElementById("precos");
+    const element = document.getElementById("kit3");
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      element.scrollIntoView({ behavior: "smooth", block: "center" });
     }
   };
 

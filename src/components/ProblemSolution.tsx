@@ -22,9 +22,9 @@ const ProblemSolution = () => {
   ];
 
   const scrollToComposition = () => {
-    const element = document.getElementById("composicao");
+    const element = document.getElementById("kit3");
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      element.scrollIntoView({ behavior: "smooth", block: "center" });
     }
   };
 
@@ -53,7 +53,7 @@ const ProblemSolution = () => {
         </div>
 
         {/* Benefits Cards */}
-        <div className="grid md:grid-cols-3 gap-8 mb-12">
+        <div className="grid md:grid-cols-3 gap-8 mb-12 max-w-6xl mx-auto">
           {benefits.map((benefit, index) => {
             const Icon = benefit.icon;
             return (
@@ -63,7 +63,7 @@ const ProblemSolution = () => {
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <CardContent className="p-8 text-center space-y-4">
-                  <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto group-hover:bg-primary transition-colors">
+                  <div className="w-16 h-16 bg-secondary/20 rounded-full flex items-center justify-center mx-auto group-hover:bg-primary transition-colors">
                     <Icon className="h-8 w-8 text-primary group-hover:text-primary-foreground transition-colors" />
                   </div>
                   <h4 className="text-2xl font-bold text-foreground">

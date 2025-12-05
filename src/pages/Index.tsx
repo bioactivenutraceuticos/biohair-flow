@@ -2,11 +2,11 @@ import HeroSection from "@/components/HeroSection";
 import ProblemSolution from "@/components/ProblemSolution";
 import ProductShowcase from "@/components/ProductShowcase";
 import BeforeAfterSection from "@/components/BeforeAfterSection";
-import CertificationsSection from "@/components/CertificationsSection";
-import ScientificAuthoritySection from "@/components/ScientificAuthoritySection";
 import CompositionSection from "@/components/CompositionSection";
+import TransparencySection from "@/components/TransparencySection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import PriceAnchoringSection from "@/components/PriceAnchoringSection";
+import GuaranteeSection from "@/components/GuaranteeSection";
 import PricingSection from "@/components/PricingSection";
 import FAQSection from "@/components/FAQSection";
 import Footer from "@/components/Footer";
@@ -25,17 +25,16 @@ const Index = () => {
         <BeforeAfterSection />
       </div>
       <div id="anvisa">
-        <CertificationsSection />
+        <CompositionSection />
       </div>
-      <CompositionSection />
+      <TransparencySection />
       <div id="depoimentos">
         <TestimonialsSection />
       </div>
       <PriceAnchoringSection />
+      <GuaranteeSection />
       <div id="comprar">
-        <div id="garantia">
-          <PricingSection />
-        </div>
+        <PricingSection />
       </div>
       <div id="faq">
         <FAQSection />

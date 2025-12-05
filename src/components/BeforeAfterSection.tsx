@@ -5,7 +5,7 @@ const BeforeAfterSection = () => {
     <section className="py-20 px-4 bg-accent">
       <div className="container mx-auto">
         {/* Header */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
             Veja a Transformação Real
           </h2>
@@ -15,7 +15,7 @@ const BeforeAfterSection = () => {
         </div>
 
         {/* Before/After Image */}
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <div className="rounded-2xl overflow-hidden animate-fade-in">
             <img
               src={beforeAfterImg}

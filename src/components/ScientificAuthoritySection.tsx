@@ -147,8 +147,8 @@ const ScientificAuthoritySection = () => {
           <div className="grid md:grid-cols-2 gap-4">
             {certifications.map((cert, index) => (
               <div key={index} className="flex items-center gap-3">
-                <div className="flex-shrink-0 w-6 h-6 bg-secondary rounded-full flex items-center justify-center">
-                  <Check className="h-4 w-4 text-secondary-foreground" />
+                <div className="flex-shrink-0 w-6 h-6 bg-primary rounded-full flex items-center justify-center">
+                  <Check className="h-4 w-4 text-primary-foreground" />
                 </div>
                 <span className="text-base md:text-lg text-foreground font-medium">{cert}</span>
               </div>

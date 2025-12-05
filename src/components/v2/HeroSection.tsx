@@ -42,8 +42,8 @@ const HeroSection = () => {
                   className="flex items-center space-x-2 animate-slide-in"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
-                  <div className="flex-shrink-0 w-5 h-5 rounded-full bg-secondary flex items-center justify-center">
-                    <Check className="h-3 w-3 text-secondary-foreground" />
+                  <div className="flex-shrink-0 w-5 h-5 rounded-full bg-primary flex items-center justify-center">
+                    <Check className="h-3 w-3 text-primary-foreground" />
                   </div>
                   <span className="text-base text-foreground font-medium whitespace-nowrap">
                     {benefit}
