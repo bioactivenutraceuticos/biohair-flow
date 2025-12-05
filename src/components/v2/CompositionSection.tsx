@@ -12,46 +12,40 @@ import anvisaSeal from "@/assets/Selo AVNISA - 1.png";
 const CompositionSection = () => {
   const mainIngredients = [
     {
-      icon: Leaf,
-      name: "Saw Palmetto",
-      benefit: "Reduz DHT em 38% - Bloqueia enzima que causa queda",
-      study: "Journal of Alternative Medicine, 2020",
-      image: vitaminEImg,
-    },
-    {
-      icon: Sparkles,
-      name: "Biotina (Vitamina B7)",
-      benefit: "73% de melhora na resistência capilar",
-      study: "Harvard Study, 2019",
-      image: biotinImg,
-    },
-    {
       icon: Droplet,
-      name: "Cafeína Pura",
-      benefit: "Estimula crescimento em 83% dos folículos",
-      study: "Dermatology Research, 2021",
-      image: vitaminCImg,
-    },
-    {
-      icon: Heart,
-      name: "Pantenol (Pró-Vitamina B5)",
-      benefit: "67% mais hidratação capilar",
-      study: "Int. Journal of Cosmetic Science",
-      image: collagenImg,
-    },
-    {
-      icon: Pill,
-      name: "Niacinamida (Vitamina B3)",
-      benefit: "Reduz inflamação em 54%",
-      study: "Dermatologic Surgery, 2020",
+      name: "Vitamina E (Tocoferol)",
+      benefit: "Antioxidante poderoso para proteção capilar",
       image: vitaminEImg,
     },
     {
       icon: Star,
-      name: "Zinco Quelado",
-      benefit: "89% de melhora em casos de alopecia",
-      study: "Dermatology Online, 2021",
+      name: "Zinco",
+      benefit: "Previne a queda e fortalece o bulbo capilar",
       image: zincImg,
+    },
+    {
+      icon: Pill,
+      name: "Vitamina C (Ác. Ascórbico)",
+      benefit: "Favorece a absorção de nutrientes essenciais",
+      image: vitaminCImg,
+    },
+    {
+      icon: Leaf,
+      name: "L-Cisteína",
+      benefit: "Aminoácido essencial para formação da queratina",
+      image: collagenImg,
+    },
+    {
+      icon: Sparkles,
+      name: "Ácido Hialurônico",
+      benefit: "Hidratação profunda e retenção de água nos fios",
+      image: biotinImg,
+    },
+    {
+      icon: Heart,
+      name: "Silício",
+      benefit: "Fortalece a estrutura capilar e aumenta brilho",
+      image: folicAcidImg,
     },
   ];
 
@@ -75,12 +69,9 @@ const CompositionSection = () => {
       <div className="container mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 uppercase">
-            Por Que Bio Active Hair é Diferente de Tudo Que Você Já Tentou?
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
+            Sua fórmula contempla os seguintes elementos:
           </h2>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto">
-            Desenvolvido com base em <span className="text-primary font-bold">15 anos de pesquisas</span> publicadas nos principais journals de dermatologia do mundo
-          </p>
         </div>
 
         {/* Main Ingredients Grid */}
@@ -100,15 +91,14 @@ const CompositionSection = () => {
                     className="w-full h-full object-cover object-center"
                   />
                 </div>
-                <CardContent className="p-6 space-y-3">
+                <CardContent className="p-6 space-y-4">
                   <div className="w-12 h-12 bg-accent rounded-lg flex items-center justify-center">
                     <Icon className="h-6 w-6 text-primary" />
                   </div>
                   <h4 className="text-xl font-bold text-foreground">
                     {ingredient.name}
                   </h4>
-                  <p className="text-base font-semibold text-primary">{ingredient.benefit}</p>
-                  <p className="text-sm text-muted-foreground italic">({ingredient.study})</p>
+                  <p className="text-muted-foreground">{ingredient.benefit}</p>
                 </CardContent>
               </Card>
             );

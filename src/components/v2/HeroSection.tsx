@@ -19,39 +19,33 @@ const HeroSection = () => {
       <div className="container mx-auto">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Text Content */}
-          <div className="space-y-6 animate-fade-in">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl text-foreground leading-tight font-bold uppercase">
-              Método Científico Reduz Queda Capilar em{" "}
-              <span className="text-primary font-black">87% dos Casos</span> em Apenas{" "}
-              <span className="text-primary font-black">30 Dias</span>
+          <div className="space-y-8 animate-fade-in">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl text-foreground leading-tight">
+              <span className="font-bold">ESTÁ TENDO</span><br />
+              <span className="font-bold">DIFICULDADE PARA</span><br />
+              <span className="text-primary font-black">RESOLVER SEU PROBLEMA</span><br />
+              <span className="font-bold">DE QUEDA CAPILAR?</span>
             </h1>
-            
-            <p className="text-lg md:text-xl text-muted-foreground font-medium">
-              (Baseado em 15 estudos internacionais + garantia de 120 Dias)
-            </p>
-
-            <h2 className="text-xl md:text-2xl text-foreground font-semibold leading-relaxed">
-              Descubra como <span className="text-primary font-bold">10.000+ brasileiros</span> pararam a queda capilar usando a fórmula desenvolvida com tecnologia suíça, aprovada pela ANVISA e testada dermatologicamente
-            </h2>
+            <h3 className="text-xl md:text-2xl text-primary font-semibold">
+              ADQUIRA AGORA O SEU E VEJA VOCÊ MESMA!!!
+            </h3>
 
             {/* Benefits List */}
-            <div className="space-y-3 py-4">
+            <div className="flex flex-wrap gap-4">
               {[
-                "Reduz queda em até 87% em 30 dias (comprovado cientificamente)",
-                "18 ingredientes ativos com estudos publicados internacionalmente",
-                "Certificado pela ANVISA - 100% seguro e natural",
-                "Garantia blindada de 120 dias ou 100% do seu dinheiro de volta",
-                "Frete grátis para todo o Brasil",
+                "Certificado pela ANVISA",
+                "Fórmula ultra avançada",
+                "Sem efeitos colaterais",
               ].map((benefit, index) => (
                 <div
                   key={index}
-                  className="flex items-start space-x-3 animate-slide-in"
+                  className="flex items-center space-x-2 animate-slide-in"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
-                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-secondary flex items-center justify-center mt-0.5">
-                    <Check className="h-4 w-4 text-secondary-foreground" />
+                  <div className="flex-shrink-0 w-5 h-5 rounded-full bg-secondary flex items-center justify-center">
+                    <Check className="h-3 w-3 text-secondary-foreground" />
                   </div>
-                  <span className="text-base md:text-lg text-foreground font-medium">
+                  <span className="text-base text-foreground font-medium whitespace-nowrap">
                     {benefit}
                   </span>
                 </div>
@@ -62,9 +56,9 @@ const HeroSection = () => {
             <Button
               onClick={scrollToPricing}
               size="lg"
-              className="w-full md:w-auto bg-primary text-primary-foreground hover:bg-primary/90 text-lg px-8 py-6 h-auto animate-pulse-glow rounded-full font-black"
+              className="bg-primary text-primary-foreground hover:bg-primary/90 text-lg px-6 py-6 h-auto animate-pulse-glow rounded-full"
             >
-              GARANTIR MINHA TRANSFORMAÇÃO CAPILAR
+              Quero <span className="font-bold">parar de sofrer</span> com meu cabelo!
             </Button>
           </div>
 

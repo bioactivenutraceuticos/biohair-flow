@@ -39,9 +39,9 @@ const GuaranteeSection = () => {
               <Button
                 onClick={scrollToPricing}
                 size="lg"
-                className="bg-primary text-primary-foreground hover:bg-primary/90 text-lg px-8 py-6 h-auto whitespace-nowrap"
+                className="bg-primary text-primary-foreground hover:bg-primary/90 text-lg px-8 py-6 h-auto font-bold text-center"
               >
-                COMPRE AGORA
+                SIM! QUERO PARAR A QUEDA<br />EM 60 DIAS
               </Button>
             </div>
           </div>

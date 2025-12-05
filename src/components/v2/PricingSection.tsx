@@ -9,7 +9,6 @@ import product5Bottles from "@/assets/product-5-bottles.png";
 const PricingSection = () => {
   const plans = [
     {
-      id: "kit1",
       name: "Básico",
       description: "com 60 cápsulas.",
       installments: "12x DE R$12,10",
@@ -18,10 +17,8 @@ const PricingSection = () => {
       isRecommended: false,
       image: product1Bottle,
       checkoutUrl: "https://ev.braip.com/checkout/pla9xzqy/chene9ov?currency=BRL",
-      unitsAvailable: 47,
     },
     {
-      id: "kit3",
       name: "Recomendado",
       description: "com 180 cápsulas.",
       oldPrice: "R$591,00",
@@ -31,10 +28,8 @@ const PricingSection = () => {
       isRecommended: true,
       image: product3Bottles,
       checkoutUrl: "https://ev.braip.com/checkout/plakrvxl/chene9ov?currency=BRL",
-      unitsAvailable: 23,
     },
     {
-      id: "kit5",
       name: "Avançado",
       description: "com 300 cápsulas.",
       oldPrice: "R$993,00",
@@ -44,7 +39,6 @@ const PricingSection = () => {
       isRecommended: false,
       image: product5Bottles,
       checkoutUrl: "https://ev.braip.com/checkout/plagzgrj/chene9ov?currency=BRL",
-      unitsAvailable: 35,
     },
   ];
 
@@ -53,7 +47,7 @@ const PricingSection = () => {
       <div className="container mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 uppercase">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
             Escolha o melhor kit para você:
           </h2>
         </div>
@@ -63,7 +57,6 @@ const PricingSection = () => {
           {plans.map((plan, index) => (
             <Card
               key={index}
-              id={plan.id}
               className={`relative hover:scale-105 transition-all duration-300 ${
                 plan.isRecommended
                   ? "bg-muted border-2 border-primary"
@@ -140,15 +133,14 @@ const PricingSection = () => {
                 {/* CTA Button */}
                 <Button
                   asChild
-                  className={`w-full h-auto py-4 text-lg font-bold ${
+                  className={`w-full h-14 text-lg font-bold ${
                     plan.isRecommended
                       ? "bg-primary text-primary-foreground hover:bg-primary/90 animate-pulse-glow"
                       : "bg-accent text-primary hover:bg-accent/80"
                   }`}
                 >
-                  <a href={plan.checkoutUrl} target="_blank" rel="noopener noreferrer" className="flex flex-col gap-1">
-                    <span className="text-xl font-black">GARANTIR DESCONTO</span>
-                    <span className="text-sm font-semibold">(Últimas {plan.unitsAvailable} Unidades)</span>
+                  <a href={plan.checkoutUrl} target="_blank" rel="noopener noreferrer">
+                    COMPRE AGORA
                   </a>
                 </Button>
               </CardContent>
