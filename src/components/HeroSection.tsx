@@ -21,13 +21,16 @@ const HeroSection = () => {
           {/* Text Content */}
           <div className="space-y-8 animate-fade-in">
             <h1 className="text-4xl md:text-5xl lg:text-6xl text-foreground leading-tight">
-              <span className="font-bold">ESTÁ TENDO</span><br />
-              <span className="font-bold">DIFICULDADE PARA</span><br />
-              <span className="text-primary font-black">RESOLVER SEU PROBLEMA</span><br />
-              <span className="font-bold">DE QUEDA CAPILAR?</span>
+              <span className="font-bold">Pare a queda de cabelo em</span>{" "}
+              <span className="text-primary font-black">30 dias</span>{" "}
+              <span className="font-bold">ou seu dinheiro de volta</span>
+              <br />
+              <span className="text-lg md:text-xl font-semibold text-muted-foreground">
+                - método aprovado pela ANVISA
+              </span>
             </h1>
             <h3 className="text-xl md:text-2xl text-primary font-semibold">
-              ADQUIRA AGORA O SEU E VEJA VOCÊ MESMA!!!
+              Usado por 47.000+ Brasileiros
             </h3>
 
             {/* Benefits List */}
