@@ -33,9 +33,9 @@ const ProblemSolution = () => {
       <div className="container mx-auto">
         {/* Header */}
         <div className="text-center mb-16 space-y-6">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl text-foreground">
+          <h3 className="text-3xl md:text-4xl lg:text-5xl text-foreground">
             <span className="text-primary font-black">CANSADA DE SOFRER</span> <span className="font-bold">COM CABELOS QUE QUEBRAM, CAEM E NÃO CRESCEM?</span>
-          </h2>
+          </h3>
           <div className="h-1 w-24 bg-primary mx-auto rounded-full"></div>
           <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto">
             Com <span className="font-bold">Bio Active Hair</span>, você além de solucionar seus problemas capilares, também irá proporcionar para sua pele elementos para eliminar <span className="font-bold">linhas de expressão</span> e <span className="font-bold">fortalecimento de suas unhas</span>.

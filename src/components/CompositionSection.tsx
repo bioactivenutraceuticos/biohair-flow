@@ -121,9 +121,9 @@ const CompositionSection = () => {
       <div className="container mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 uppercase">
-            Por Que Bio Active Hair é Diferente de Tudo Que Você Já Tentou?
-          </h2>
+          <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 uppercase">
+            Aprovado pela ANVISA - Eficácia Comprovada
+          </h3>
           <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto mb-8 leading-relaxed">
             Enquanto outros produtos prometem milagres sem base científica, o Bio Active Hair foi desenvolvido com base em{" "}
             <span className="text-primary font-bold">15 anos de pesquisas</span> publicadas nos principais journals de dermatologia do mundo.
