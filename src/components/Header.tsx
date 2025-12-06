@@ -42,6 +42,12 @@ const Header = () => {
             >
               Depoimentos
             </button>
+            <a
+              href="/blog"
+              className="text-foreground hover:text-primary transition-colors"
+            >
+              Blog
+            </a>
             <button
               onClick={() => scrollToSection("precos")}
               className="text-foreground hover:text-primary transition-colors"
@@ -106,6 +112,12 @@ const Header = () => {
               >
                 Depoimentos
               </button>
+              <a
+                href="/blog"
+                className="text-left text-foreground hover:text-primary transition-colors py-2"
+              >
+                Blog
+              </a>
               <button
                 onClick={() => scrollToSection("precos")}
                 className="text-left text-foreground hover:text-primary transition-colors py-2"
